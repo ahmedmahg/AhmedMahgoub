@@ -63,8 +63,8 @@ section {
         flex-direction: column; /* Stacks image on top, text below */
         justify-content: center;
         align-items: center; /* Centers everything */
-        text-align: center; /* Centers text */
-        background-position: top center; /* Moves image to the top */
+        text-align: left; /* Centers text */
+        background-position:  center; /* Moves image to the top */
         background-size: cover; /* Ensures it covers the screen properly */
         background-attachment: scroll; /* Fixes scrolling issue on mobile */
         padding-top: 50vh; /* Pushes text lower to separate from image */
