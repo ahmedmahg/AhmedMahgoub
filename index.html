@@ -124,155 +124,183 @@
     </section>
     
     </section>
-    <section class="Projects" id="Projects">
-        <h2 class="title">Projects</h2>
-        <div class="content">
-    
-            <!-- Project 1: Micro Gas Turbine (Jet Engine) -->
-            <div class="project-card">
+   <style>
+    /* General Card Styles */
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 0;
+    }
+
+    .title {
+        font-size: 28px;
+        text-align: left;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 20px;
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    .card {
+        background: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .icon {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .info {
+        text-align: left;
+    }
+
+    .info h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .info p {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 10px;
+    }
+
+    /* Image & Video Styling */
+    .project-media img,
+    .project-media video {
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+
+    /* Documentation Link */
+    .more-details {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 8px 12px;
+        background: #007bff;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .more-details:hover {
+        background: #0056b3;
+    }
+</style>
+
+<section class="cards" id="Projects">
+    <h2 class="title">Projects</h2>
+    <div class="content">
+
+        <!-- Project 1: Micro Gas Turbine (Jet Engine) -->
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-cogs"></i>
+            </div>
+            <div class="info">
                 <h3>Micro Gas Turbine (Jet Engine)</h3>
-                <p class="project-category">Thermal & CFD Analysis | Ansys Fluent, SolidWorks</p>
-                <div class="project-info">
-                    <ul>
-                        <li>Funded by the Egyptian Academy of Scientific Research and Technology.</li>
-                        <li>Designed and manufactured a micro gas turbine, including compressor, combustor, and turbine disk.</li>
-                        <li>Developed combustion chamber models using EES software.</li>
-                        <li>Performed CFD simulations (air distribution, combustion, compressor analysis) in Ansys Fluent.</li>
-                        <li>Conducted stress analysis for turbine blades using SolidWorks & Ansys Mechanical.</li>
-                    </ul>
-                    <br>
-                <!-- Videos Section -->
-                <div class="gallery-row">
-                    <video class="project-video" width="48%" height="auto" autoplay muted loop playsinline>
-                        <source src="videos/CC.mp4" type="video/mp4">
-                    </video>
-                    <video class="project-video" width="48%" height="auto" autoplay muted loop playsinline>
-                        <source src="videos/ASM.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="gallery-row">
-                    <video class="project-video" width="48%" height="auto" autoplay muted loop playsinline>
-                        <source src="videos/TOT.mp4" type="video/mp4">
-                    </video>
-                    <video class="project-video" width="48%" height="auto" autoplay muted loop playsinline>
-                        <source src="videos/EXP.mp4" type="video/mp4">
-                    </video>
-                </div>
-    
-             
-                    <div class="project-gallery">
-                        <div class="gallery-row">
-                            <img src="videos/JET.png" alt="Micro Gas Turbine Design" class="project-image">
-                        </div>
-                        <div class="gallery-row">
-                            <img src="videos/VEL.png" alt="Turbine Blade Stress Analysis" class="project-image">
-                            <img src="videos/thermal.png" alt="Combustion Chamber Analysis" class="project-image">
-                        </div>
-                    </div>
-                    <a href="https://drive.google.com/drive/folders/1P-ZJqMC50FIAhVODEYGUPdZZ5wKkuSZ4?usp=sharing" class="more-details">Documentation (Click)</a>
-                </div>
-            </div>
-            <br>
-            <br>
-            <br>
-    
-            <!-- Project 2: Hybrid Electric Vehicles (HEV) Modeling -->
-            <div class="project-card">
-             
-    
-                <div class="project-info">
-                    <h3>Hybrid Electric Vehicles (HEV) Modeling</h3>
-                    <p class="project-category">Energy Management | MATLAB & Simulink</p>
-                    <ul>
-                        <li>Collaborated with Ain Shams University Research Center.</li>
-                        <li>Modeled and simulated HEV energy management using MATLAB & Simulink.</li>
-                        <li>Optimized energy efficiency and vehicle performance.</li>
-                        <li>Relevant to thermal systems, energy management, and automotive engineering.</li>
-                        <li><strong>Skills:</strong> System modeling, simulation, optimization.</li>
-                    </ul>
-                    <div class="project-media">
-                        <img src="images/HEV.png" alt="Hybrid Electric Vehicles Modeling" class="project-image">
-                        <video class="project-video" width="100%" height="auto" autoplay muted loop playsinline>
-                            <source src="videos/HEV.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <a href="https://drive.google.com/drive/folders/1qxwzy5NNhLi53ScuqUKGYv3nLJHEbU_e?usp=sharing" class="more-details">Documentation (Click)</a>
-                </div>
-            </div>
+                <p><strong>Thermal & CFD Analysis | Ansys Fluent, SolidWorks</strong></p>
+                <p><strong>Funded by the Egyptian Academy of Scientific Research and Technology</strong></p>
 
-            <br>
-            <br>
-            <br>
-    
-          <!-- Project 3: Humanoid Robot -->
-            <div class="project-card">
-            <div class="project-info">
-            <h3>Humanoid Robot</h3>
-            <p class="project-category">Robotics & Automation | SolidWorks</p>
-            <ul>
-            <li>Designed and manufactured a humanoid robot for nursing assistance at Ain Shams Specialist Hospital.</li>
-            <li>Developed robot components using 3D printing and traditional mechanical techniques.</li>
-            <li>Performed motor selection, speed reduction calculations, and system modeling.</li>
-            <li>Currently in the implementation phase at the hospital.</li>
-        </ul>
-        <div class="project-media">
-            <img src="images/RoB.png" alt="Humanoid Robot" class="project-image">
+                <ul>
+                    <li>Designed and manufactured a micro gas turbine with key components, including a compressor, combustion chamber, and turbine disk.</li>
+                    <li>Conducted thermal expansion simulations, CFD analysis, and stress analysis using SolidWorks and Ansys.</li>
+                    <li>Relevance: Applicable to thermal systems, fluid mechanics, and mechanical design.</li>
+                    <li>Skills Demonstrated: Thermal analysis, CFD, stress analysis, and mechanical design.</li>
+                </ul>
+                
+                <div class="project-media">
+                    <img src="images/JET.png" alt="Micro Gas Turbine Design">
+                    <video autoplay loop muted playsinline>
+                        <source src="videos/JET.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                </div>
+                <a href="https://drive.google.com/drive/folders/1P-ZJqMC50FIAhVODEYGUPdZZ5wKkuSZ4?usp=sharing" class="more-details">Documentation</a>
+            </div>
         </div>
-        <a href="https://drive.google.com/drive/folders/1ZdLzQUk5tEevAq3n_3rCq0NgJ7g-QGWt?usp=sharing" class="more-details">Documentation (Click)</a>
+
+        <!-- Project 2: Hybrid Electric Vehicles (HEV) Modeling -->
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-car"></i>
+            </div>
+            <div class="info">
+                <h3>Hybrid Electric Vehicles (HEV) Modeling</h3>
+                <p><strong>Energy Management | MATLAB & Simulink</strong></p>
+                <p><strong>Collaboration | Faculty of Engineering, Ain Shams University Research Center</strong></p>
+
+                <ul>
+                    <li>Developed HEV energy management simulations using MATLAB & Simulink.</li>
+                    <li>Modeled and simulated Hybrid Electric Vehicle energy management.</li>
+                    <li>Focused on optimizing energy efficiency and performance.</li>
+                    <li>Relevance: Applicable to thermal systems, energy management, and automotive engineering.</li>
+                    <li>Skills Demonstrated: System modeling, simulation, and optimization.</li>
+                </ul>
+                
+                <div class="project-media">
+                    <img src="images/HEV.png" alt="HEV Simulation">
+                    <video autoplay loop muted playsinline>
+                        <source src="videos/HEV.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    
+                </div>
+                <a href="https://drive.google.com/drive/folders/1qxwzy5NNhLi53ScuqUKGYv3nLJHEbU_e?usp=sharing" class="more-details">Documentation</a>
+            </div>
+        </div>
+
+        <!-- Project 3: Humanoid Robot -->
+        <div class="card">
+            <div class="icon">
+                <i class="fas fa-robot"></i>
+            </div>
+            <div class="info">
+                <h3>Humanoid Robot</h3>
+                <p><strong>Funded by: Ain Shams University</strong></p>
+
+                <ul>
+                    <li>Designed and manufactured a humanoid robot, contributing to the Shams Robot initiative, aimed at advancing robotics in healthcare.</li>
+                    <li>Developed for nursing assistance at Ain Shams Specialist Hospital, integrating face recognition, autonomous navigation, and telehealth capabilities.</li>
+                    <li>Key responsibilities included mechanical design, motor specification calculations, and overseeing precision 3D-printed components.</li>
+                    <li>Executed advanced kinematic modeling and motion control optimization to enhance robotic functionality.</li>
+                    <li>Relevance: Directly applicable to robotics, mechatronics, AI-driven automation, and healthcare innovation.</li>
+                    <li>Skills Demonstrated: Mechanical design, kinematic analysis, prototyping, system integration, and real-world medical robotics applications.</li>
+                </ul>
+                
+                
+                <div class="project-media">
+                    <img src="images/ROB.png" alt="Humanoid Robot">
+                   
+                </div>
+                <a href="https://drive.google.com/drive/folders/1ZdLzQUk5tEevAq3n_3rCq0NgJ7g-QGWt?usp=sharing" class="more-details">Documentation</a>
+            </div>
+        </div>
+
     </div>
-</div>
+</section>
 
-
-        <!-- Project 5: Pumping Station Design -->
-        <br><br><br>
-        <div class="project-card">
-            <div class="project-info">
-                <h3>Pumping Station Design</h3>
-                <p class="project-category">Hydraulic Systems | Simulation & Analysis</p>
-                <ul>
-                    <li>Designed a pumping station for efficient water transport.</li>
-                    <li>Selected pumps, piping, and valves to optimize energy efficiency.</li>
-                    <li>Conducted CFD simulations to assess flow rates and minimize system losses.</li>
-                </ul>
-                <a href="#" class="more-details">Documentation (Click)</a>
-            </div>
-        </div>
-
-<br><br><br>
-
-        <!-- Project 6: Permanent Magnet Generator (PMG) -->
-        <div class="project-card">
-            <div class="project-info">
-                <h3>Permanent Magnet Generator (PMG)</h3>
-                <p class="project-category">Electromagnetic Design | Renewable Energy</p>
-                <ul>
-                    <li>Designed and optimized a Permanent Magnet Generator for renewable energy applications.</li>
-                    <li>Enhanced rotor-stator configuration for maximum power efficiency.</li>
-                    <li>Selected high-performance magnet materials to ensure durability and performance.</li>
-                </ul>
-                <a href="#" class="more-details">Documentation (Click)</a>
-            </div>
-        </div>
-
-        <br><br><br>
-
-        <!-- Project 7: Aluminum Vice -->
-        <div class="project-card">
-            <div class="project-info">
-                <h3>Aluminum Vice</h3>
-                <p class="project-category">Precision Machining | Mechanical Design</p>
-                <ul>
-                    <li>Designed and fabricated an aluminum vice for machining applications.</li>
-                    <li>Performed stress analysis to ensure optimal clamping force.</li>
-                    <li>Manufactured using CNC machining and manual finishing for high accuracy.</li>
-                </ul>
-                <a href="#" class="more-details">Documentation (Click)</a>
-            </div>
-        </div>
-
-    </section>
-    
-    
     
     
     <section class="cards contact" id="contact">
@@ -301,12 +329,11 @@
     </section>
     
     <footer class="footer">
-        <p class="footer-title">Copyrights @ <span>Islam Mahfouz</span></p>
+        <p class="footer-title">Copyrights @ <span>Ahmed Mahgoub</span></p>
         <div class="social-icons">
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/in/ahmed-mahgoub-528918188?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BNyxD3MvDS6ysbdTbv9TFqA%3D%3D"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:ahmed.mahgoubu@gmail.com"><i class="far fa-envelope"></i></a>
+          
         </div>
     </footer>
 
