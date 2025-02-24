@@ -40,22 +40,41 @@ header {
 }
 
 section {
-    padding: 100px 200px;
+    padding: 200px 100px;
 }
 
 .main {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    background: url(images/121212.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    align-items: center; /* Vertically centers content */
+    justify-content: flex-start; /* Keeps text on the left */
+    background: url(images/PROF.png) no-repeat;
+    background-position: right center; /* Keeps the image in the right middle */
+    background-size: contain; /* Ensures the full image is visible */
+    background-attachment: fixed; /* Keeps the background fixed */
+    flex-direction: row; /* Default: text and image side by side */
+    padding: 20px;
 }
 
+/* Mobile Screen Adjustments */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column; /* Stacks image on top, text below */
+        justify-content: center;
+        align-items: center; /* Centers everything */
+        text-align: center; /* Centers text */
+        background-position: top center; /* Moves image to the top */
+        background-size: cover; /* Ensures it covers the screen properly */
+        background-attachment: scroll; /* Fixes scrolling issue on mobile */
+        padding-top: 50vh; /* Pushes text lower to separate from image */
+    }
+}
+
+
+
 .main h2 {
-    color: #ffffff;
+    color: #070707;
     font-size: 1em;
     font-weight: 500;
 }
@@ -63,18 +82,20 @@ section {
 .main h2 span {
     display: inline-block;
     margin-top: 10px;
-    color: #ffffff;
+    color: #070707;
     font-size: 2.5em;
     font-weight: 600;
 }
 
 .main h2 small {
-    width: 60%;
+    width: 50%;
     display: inline-block;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
+    
+
     text-align: left;
-    color: #ffffff;
+    color: #070707;
     font-size: 1.2em;
     font-weight: 600;
 }
