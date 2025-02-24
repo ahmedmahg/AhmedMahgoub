@@ -55,7 +55,6 @@ section {
     background-attachment: fixed; /* Keeps the background fixed */
     flex-direction: row; /* Default: text and image side by side */
     padding: 20px;
-    padding-top: 80px; /* Adjust this value based on your header height */
 }
 
 /* Mobile Screen Adjustments */
@@ -66,13 +65,11 @@ section {
         align-items: center; /* Centers everything */
         text-align: center; /* Centers text */
         background-position: top center; /* Moves image to the top */
-        background-size: contain; /* Prevents the image from being cut off */
+        background-size: cover; /* Ensures it covers the screen properly */
         background-attachment: scroll; /* Fixes scrolling issue on mobile */
-        padding-top: 120px; /* Ensures content starts below the header */
+        padding-top: 50vh; /* Pushes text lower to separate from image */
     }
 }
-
-
 
 
 .main h2 {
