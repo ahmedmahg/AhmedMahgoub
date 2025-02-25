@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Education</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        header .navigation {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        header .navigation a {
+            text-decoration: none;
+            color: white;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            transition: 0.3s;
+        }
+
+        header .navigation a:hover {
+            background: #1abc9c;
+            border-radius: 5px;
+        }
+
+        section.education {
+            padding: 20px;
+        }
+
+        .education-entry {
+            margin-bottom: 20px;
+        }
+
+        .education-entry h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: #2c3e50;
+        }
+
+        .education-entry p {
+            margin: 5px 0;
+        }
+
+        .education-entry ul {
+            padding-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            border-top: 1px solid #ddd;
+        }
+
+        footer .footer-title {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        footer .social-icons a:hover {
+            color: #1abc9c;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            header .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header .navigation a {
+                font-size: 0.8rem;
+            }
+
+            section.education {
+                padding: 10px;
+            }
+
+            .education-entry h3 {
+                font-size: 1rem;
+            }
+
+            .education-entry p {
+                font-size: 0.9rem;
+            }
+
+            table th, table td {
+                padding: 8px;
+                font-size: 0.8rem;
+            }
+
+            footer .footer-title {
+                font-size: 0.9rem;
+            }
+
+            footer .social-icons a {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header .logo {
+                font-size: 1.2rem;
+            }
+
+            header .navigation a {
+                font-size: 0.7rem;
+            }
+
+            .education-entry h3 {
+                font-size: 0.9rem;
+            }
+
+            .education-entry p {
+                font-size: 0.8rem;
+            }
+
+            table th, table td {
+                padding: 6px;
+                font-size: 0.7rem;
+            }
+
+            footer .footer-title {
+                font-size: 0.8rem;
+            }
+
+            footer .social-icons a {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo">Ahmed Mahgoub</a>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="Education.html">Education</a>
+            <a href="experience.html">Professional Experience</a>
+            <a href="Projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="https://drive.google.com/file/d/1E4JanQKxIjb_mItyvtQLrDDr_1j8tVIf/view?usp=sharing">My CV</a>
+        </nav>
+    </header>
+
+    <section class="education">
+        <br>
+        <br>
+        <h2>Education</h2>
+        
+        <div class="education-entry">
+            <h3>2017 – 2022</h3>
+            <p><strong>Bachelor of Science</strong></p>
+            <p>Faculty of Engineering, Ain Shams University</p>
+            <p><strong>Major:</strong> Mechanical Power Engineering</p>
+        </div>
+    
+        <div class="education-entry">
+            <h3>2022 – 2023</h3>
+            <p><strong>Full Embedded System Diploma</strong></p>
+            <p>Under the supervision of Eng. Mohamed Abd El-Basset, Principal Embedded Software Engineer at Valeo</p>
+            <p><strong>Content Includes:</strong></p>
+            <ul>
+                <li>Programming: C, Data Structures</li>
+                <li>AVR MCU Peripherals: GPIO, ADC, Timers, Interrupts, EEPROM, ICU</li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="education" class="education">
+        <h2>Education</h2>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Course Code</th>
+                    <th>Course Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Spring 2022 -->
+                <tr><td rowspan="6">Spring 2022</td><td>MEP499</td><td>Graduation Project</td></tr>
+                <tr><td>HUMx41</td><td>Legislation & Contracts</td></tr>
+                <tr><td>MEP471</td><td>Refrigeration & Air Conditioning</td></tr>
+                <tr><td>MEP431</td><td>Turbomachinery (2)</td></tr>
+                <tr><td>MEP482</td><td>Modeling & Simulation of Thermal Power</td></tr>
+                <tr><td>MEP481</td><td>Automatic Control (2)</td></tr>
+    
+                <!-- Spring 2021 -->
+                <tr><td rowspan="9">Spring 2021</td><td>HUMx21</td><td>Management & Marketing</td></tr>
+                <tr><td>MDP354</td><td>Mechanics of Machines (2)</td></tr>
+                <tr><td>MDP355</td><td>Introduction to Mechatronics</td></tr>
+                <tr><td>MEP331</td><td>Turbomachinery (1)</td></tr>
+                <tr><td>MEP351</td><td>Thermal Power Plants</td></tr>
+                <tr><td>MEP352</td><td>Renewable Energy</td></tr>
+                <tr><td>MEP361</td><td>Combustion</td></tr>
+                <tr><td>MEP362</td><td>Internal Combustion Engines (1)</td></tr>
+                <tr><td>MEP381</td><td>Automatic Control (1)</td></tr>
+    
+                <!-- Spring 2020 -->
+                <tr><td rowspan="6">Spring 2020</td><td>HUMx31</td><td>Engineering Economy</td></tr>
+                <tr><td>MDP211</td><td>Manufacturing Technology (2)</td></tr>
+                <tr><td>MDP251</td><td>Mechanics of Machines</td></tr>
+                <tr><td>MEP212</td><td>Thermodynamics (2)</td></tr>
+                <tr><td>MEP221</td><td>Heat & Mass Transfer</td></tr>
+                <tr><td>MEP231</td><td>Fluid Dynamics</td></tr>
+    
+                <!-- Spring 2019 -->
+                <tr><td rowspan="6">Spring 2019</td><td>CES112</td><td>Theory of Structures</td></tr>
+                <tr><td>EPM112</td><td>Electrical & Electronic Engineering</td></tr>
+                <tr><td>HUMx12</td><td>Technical Report Writing</td></tr>
+                <tr><td>MDP111</td><td>Manufacturing Technology</td></tr>
+                <tr><td>MDP131</td><td>Materials Engineering & Testing</td></tr>
+                <tr><td>MDP161</td><td>Machine Drawing</td></tr>
+    
+                <!-- Spring 2018 -->
+                <tr><td rowspan="7">Spring 2018</td><td>CSE011</td><td>Computer Technology</td></tr>
+                <tr><td>HUM099</td><td>Human Rights</td></tr>
+                <tr><td>HUMx11</td><td>Technical English Language</td></tr>
+                <tr><td>MDP021</td><td>Engineering Drawing & Projection</td></tr>
+                <tr><td>MDP022</td><td>Production & Engineering History</td></tr>
+                <tr><td>PHM011</td><td>Mathematics (1)</td></tr>
+                <tr><td>PHM021</td><td>Physics (1)</td></tr>
+            </tbody>
+        </table>
+    </section>
+    
+    <footer class="footer">
+        <p class="footer-title">Copyrights @ <span>Ahmed Mahgoub</span></p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/ahmed-mahgoub-528918188?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BNyxD3MvDS6ysbdTbv9TFqA%3D%3D"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:ahmed.mahgoubu@gmail.com"><i class="far fa-envelope"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>

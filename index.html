@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Ahmed Mahgoub</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 15px;
+            background-color: #2c3e50;
+            color: white;
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        header .navigation {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        header .navigation a {
+            text-decoration: none;
+            color: white;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            transition: 0.3s;
+        }
+
+        header .navigation a:hover {
+            background: #1abc9c;
+            border-radius: 5px;
+        }
+
+        /* Main Section */
+        section.main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section.main .bio {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        section.main .bio h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        section.main .bio h2 span {
+            font-size: 1.5rem;
+            color: #1abc9c;
+        }
+
+        section.main .bio h2 small {
+            font-size: 1rem;
+            color: #555;
+            display: block;
+            margin-top: 10px;
+        }
+
+        section.main .bio .main-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #1abc9c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        section.main .bio .main-btn:hover {
+            background-color: #16a085;
+        }
+
+        section.main .bio .social-icons {
+            margin-top: 20px;
+        }
+
+        section.main .bio .social-icons a {
+            margin: 0 10px;
+            color: #2c3e50;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        section.main .bio .social-icons a:hover {
+            color: #1abc9c;
+        }
+
+        section.main .photo {
+            flex: 0 0 300px;
+            text-align: right;
+        }
+
+        section.main .photo img {
+            width: 100%;
+            max-width: 250px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Cards Section */
+        .cards {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+        }
+
+        .cards .title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .cards .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .cards .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .cards .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .cards .card .icon {
+            font-size: 2rem;
+            color: #1abc9c;
+            margin-bottom: 10px;
+        }
+
+        .cards .card .info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .cards .card .info p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .cards .card .info ul {
+            padding-left: 20px;
+        }
+
+        .cards .card .info ul li {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .cards .card .project-media img,
+        .cards .card .project-media video {
+            width: 100%;
+            max-width: 250px;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .cards .card .more-details {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background: #1abc9c;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .cards .card .more-details:hover {
+            background: #16a085;
+        }
+
+        /* Contact Section */
+        section.contact {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section.contact .title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        section.contact .content {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        section.contact .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        section.contact .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        section.contact .card .icon {
+            font-size: 2rem;
+            color: #1abc9c;
+            margin-bottom: 10px;
+        }
+
+        section.contact .card .info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        section.contact .card .info p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            border-top: 1px solid #ddd;
+        }
+
+        footer .footer-title {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        footer .social-icons a:hover {
+            color: #1abc9c;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            header .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header .navigation a {
+                font-size: 0.8rem;
+            }
+
+            section.main {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+
+            section.main .bio {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
+
+            section.main .photo {
+                flex: 0 0 auto;
+                text-align: center;
+            }
+
+            section.main .photo img {
+                max-width: 200px;
+            }
+
+            .cards .title {
+                font-size: 1.5rem;
+            }
+
+            .cards .card .info h3 {
+                font-size: 1.2rem;
+            }
+
+            .cards .card .info p {
+                font-size: 0.9rem;
+            }
+
+            .cards .card .info ul li {
+                font-size: 0.8rem;
+            }
+
+            section.contact .title {
+                font-size: 1.5rem;
+            }
+
+            section.contact .card .info h3 {
+                font-size: 1.2rem;
+            }
+
+            section.contact .card .info p {
+                font-size: 0.9rem;
+            }
+
+            footer .footer-title {
+                font-size: 0.9rem;
+            }
+
+            footer .social-icons a {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header .logo {
+                font-size: 1.2rem;
+            }
+
+            header .navigation a {
+                font-size: 0.7rem;
+            }
+
+            section.main .bio h2 {
+                font-size: 1.5rem;
+            }
+
+            section.main .bio h2 span {
+                font-size: 1.2rem;
+            }
+
+            section.main .bio h2 small {
+                font-size: 0.9rem;
+            }
+
+            .cards .title {
+                font-size: 1.2rem;
+            }
+
+            .cards .card .info h3 {
+                font-size: 1rem;
+            }
+
+            .cards .card .info p {
+                font-size: 0.8rem;
+            }
+
+            .cards .card .info ul li {
+                font-size: 0.7rem;
+            }
+
+            section.contact .title {
+                font-size: 1.2rem;
+            }
+
+            section.contact .card .info h3 {
+                font-size: 1rem;
+            }
+
+            section.contact .card .info p {
+                font-size: 0.8rem;
+            }
+
+            footer .footer-title {
+                font-size: 0.8rem;
+            }
+
+            footer .social-icons a {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Ahmed Mahgoub</a>
+        <nav class="navigation">
+            <a href="index.html">Home</a>
+            <a href="Education.html">Education</a>
+            <a href="experience.html">Professional Experience</a>
+            <a href="Projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="https://drive.google.com/file/d/1E4JanQKxIjb_mItyvtQLrDDr_1j8tVIf/view?usp=sharing">My CV</a>
+        </nav>
+    </header>
+
+    <section class="main">
+        <div class="bio">
+            <h2>Hello, I'm Ahmed<br><span>Research And Development Engineer</span><br>
+                <small>Ahmed Mahgoub is a Research and Development Engineer with expertise in mechanical design, thermal systems, and product development across multiple industries. Currently, he works at Elsewedy Electric, a multinational leader in energy and infrastructure solutions, where he focuses on busway system optimization, compliance testing, and material selection. Concurrently, he contributes to Carrier Midea Egypt, specializing in HVAC system design, circuit simulation, and cross-functional collaboration with global teams. Previously, he played a crucial role in military engineering projects as a Mechanical Design Engineer, managing design reviews and project execution. His freelance experience spans robotics and automation, working on projects like the Humanoid Shams Robot, smart parking solutions, and MEP systems in Egypt and KSA. With a passion for education, Ahmed has also served as a private instructor, teaching courses in stress analysis, mechanics, and electronics. His diverse expertise in R&D, simulation, and design makes him a valuable asset in product innovation, compliance testing, and engineering solutions...</small></h2>
+            <a href="Projects.html" class="main-btn">View my work</a>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/ahmed-mahgoub-528918188?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BNyxD3MvDS6ysbdTbv9TFqA%3D%3D"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:ahmed.mahgoubu@gmail.com"><i class="far fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="photo">
+            <img src="images/PROF.png" alt="Ahmed Mahgoub">
+        </div>
+    </section>
+
+    <section class="cards" id="Projects">
+        <h2 class="title">Projects</h2>
+        <div class="content">
+            <!-- Project 1: Micro Gas Turbine (Jet Engine) -->
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <div class="info">
+                    <h3>Micro Gas Turbine (Jet Engine)</h3>
+                    <p><strong>Thermal & CFD Analysis | Ansys Fluent, SolidWorks</strong></p>
+                    <p><strong>Funded by the Egyptian Academy of Scientific Research and Technology</strong></p>
+                    <ul>
+                        <li>Designed and manufactured a micro gas turbine with key components, including a compressor, combustion chamber, and turbine disk.</li>
+                        <li>Conducted thermal expansion simulations, CFD analysis, and stress analysis using SolidWorks and Ansys.</li>
+                        <li>Relevance: Applicable to thermal systems, fluid mechanics, and mechanical design.</li>
+                        <li>Skills Demonstrated: Thermal analysis, CFD, stress analysis, and mechanical design.</li>
+                    </ul>
+                    <div class="project-media">
+                        <img src="images/JET.png" alt="Micro Gas Turbine Design">
+                        <video autoplay loop muted playsinline>
+                            <source src="videos/JET.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1P-ZJqMC50FIAhVODEYGUPdZZ5wKkuSZ4?usp=sharing" class="more-details">Documentation</a>
+                </div>
+            </div>
+
+            <!-- Project 2: Hybrid Electric Vehicles (HEV) Modeling -->
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="info">
+                    <h3>Hybrid Electric Vehicles (HEV) Modeling</h3>
+                    <p><strong>Energy Management | MATLAB & Simulink</strong></p>
+                    <p><strong>Collaboration | Faculty of Engineering, Ain Shams University Research Center</strong></p>
+                    <ul>
+                        <li>Developed HEV energy management simulations using MATLAB & Simulink.</li>
+                        <li>Modeled and simulated Hybrid Electric Vehicle energy management.</li>
+                        <li>Focused on optimizing energy efficiency and performance.</li>
+                        <li>Relevance: Applicable to thermal systems, energy management, and automotive engineering.</li>
+                        <li>Skills Demonstrated: System modeling, simulation, and optimization.</li>
+                    </ul>
+                    <div class="project-media">
+                        <img src="images/HEV.png" alt="HEV Simulation">
+                        <video autoplay loop muted playsinline>
+                            <source src="videos/HEV.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1qxwzy5NNhLi53ScuqUKGYv3nLJHEbU_e?usp=sharing" class="more-details">Documentation</a>
+                </div>
+            </div>
+
+            <!-- Project 3: Humanoid Robot -->
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="info">
+                    <h3>Humanoid Robot</h3>
+                    <p><strong>Funded by: Ain Shams University</strong></p>
+                    <ul>
+                        <li>Designed and manufactured a humanoid robot, contributing to the Shams Robot initiative, aimed at advancing robotics in healthcare.</li>
+                        <li>Developed for nursing assistance at Ain Shams Specialist Hospital, integrating face recognition, autonomous navigation, and telehealth capabilities.</li>
+                        <li>Key responsibilities included mechanical design, motor specification calculations, and overseeing precision 3D-printed components.</li>
+                        <li>Executed advanced kinematic modeling and motion control optimization to enhance robotic functionality.</li>
+                        <li>Relevance: Directly applicable to robotics, mechatronics, AI-driven automation, and healthcare innovation.</li>
+                        <li>Skills Demonstrated: Mechanical design, kinematic analysis, prototyping, system integration, and real-world medical robotics applications.</li>
+                    </ul>
+                    <div class="project-media">
+                        <img src="images/ROB.png" alt="Humanoid Robot">
+                    </div>
+                    <a href="https://drive.google.com/drive/folders/1ZdLzQUk5tEevAq3n_3rCq0NgJ7g-QGWt?usp=sharing" class="more-details">Documentation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards contact" id="contact">
+        <h2 class="title">Let's work together</h2>
+        <div class="content">
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="info">
+                    <h3>Phone</h3>
+                    <p>+20 1025227651</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info">
+                    <h3>Email</h3>
+                    <p>ahmed.mahgoubu@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="footer-title">Copyrights @ <span>Ahmed Mahgoub</span></p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/ahmed-mahgoub-528918188?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BNyxD3MvDS6ysbdTbv9TFqA%3D%3D"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:ahmed.mahgoubu@gmail.com"><i class="far fa-envelope"></i></a>
+        </div>
+    </footer>
+
+</body>
+</html>
