@@ -14,12 +14,15 @@
             padding: 0;
             box-sizing: border-box;
             line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
         }
 
-      /* Header Styles */
-        header {
+        /* Header Styles */
+       /* Header */
+       header {
             width: 100%;
-            background: #2c3e50;
+            background-color: #0d3160;
             padding: 15px 30px;
             display: flex;
             justify-content: space-between;
@@ -37,6 +40,10 @@
             text-decoration: none;
         }
 
+        header .navigation {
+            padding-right: 50px;
+        }
+
         header .navigation a {
             color: white;
             text-decoration: none;
@@ -50,47 +57,93 @@
             border-radius: 5px;
         }
 
-
+        /* Education Section */
         section.education {
-            padding: 20px;
+            padding: 100px 20px 20px; /* Adjusted padding to account for fixed header */
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .education-entry {
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .education-entry:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .education-entry h3 {
-            margin: 0;
-            font-size: 1.2rem;
+            margin: 0 0 10px;
+            font-size: 1.5rem;
             color: #2c3e50;
         }
 
         .education-entry p {
             margin: 5px 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .education-entry p strong {
+            color: #2c3e50;
         }
 
         .education-entry ul {
             padding-left: 20px;
+            margin: 10px 0;
         }
 
+        .education-entry ul li {
+            margin-bottom: 5px;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* Table Styles */
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
         table th, table td {
-            padding: 10px;
+            padding: 12px;
             border: 1px solid #ddd;
             text-align: left;
+            font-size: 0.95rem;
         }
 
+        table th {
+            background-color: #2c3e50;
+            color: white;
+            font-weight: bold;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Footer Styles */
         footer {
             text-align: center;
             padding: 20px;
             background-color: #2c3e50;
             color: white;
             border-top: 1px solid #ddd;
+            margin-top: 40px;
         }
 
         footer .footer-title {
@@ -111,30 +164,49 @@
 
         /* Mobile Styles */
         @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            header .logo {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
             header .navigation {
                 flex-direction: column;
                 align-items: center;
             }
 
             header .navigation a {
-                font-size: 0.8rem;
+                font-size: 14px;
+                padding: 5px 10px;
             }
 
             section.education {
-                padding: 10px;
+                padding: 80px 10px 10px;
+            }
+
+            .education-entry {
+                padding: 15px;
             }
 
             .education-entry h3 {
-                font-size: 1rem;
+                font-size: 1.2rem;
             }
 
             .education-entry p {
                 font-size: 0.9rem;
             }
 
+            .education-entry ul li {
+                font-size: 0.85rem;
+            }
+
             table th, table td {
                 padding: 8px;
-                font-size: 0.8rem;
+                font-size: 0.85rem;
             }
 
             footer .footer-title {
@@ -147,6 +219,8 @@
         }
 
         @media (max-width: 480px) {
+
+            
             header {
                 flex-direction: column;
                 padding: 10px;
@@ -168,16 +242,20 @@
             }
 
             .education-entry h3 {
-                font-size: 0.9rem;
+                font-size: 1.1rem;
             }
 
             .education-entry p {
+                font-size: 0.85rem;
+            }
+
+            .education-entry ul li {
                 font-size: 0.8rem;
             }
 
             table th, table td {
                 padding: 6px;
-                font-size: 0.7rem;
+                font-size: 0.8rem;
             }
 
             footer .footer-title {
@@ -206,7 +284,6 @@
 
     <section class="education">
         <br>
-        <br>
         <h2>Education</h2>
         
         <div class="education-entry">
@@ -229,7 +306,7 @@
     </section>
     
     <section id="education" class="education">
-        <h2>Education</h2>
+        <h2>Coursework</h2>
     
         <table>
             <thead>
