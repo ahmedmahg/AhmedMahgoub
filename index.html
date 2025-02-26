@@ -21,7 +21,7 @@
         /* Header Styles */
         header {
             width: 100%;
-            background: #2c3e50;
+            background-color: #0d3160;
             padding: 15px 30px;
             display: flex;
             justify-content: space-between;
@@ -37,6 +37,9 @@
             font-size: 24px;
             font-weight: bold;
             text-decoration: none;
+        }
+        header .navigation  {
+           padding-right: 50px;
         }
 
         header .navigation a {
@@ -215,7 +218,7 @@
 
         /* Contact Section */
         section.contact {
-            background-color: #2c3e50;
+            background-color: #0d3160;
             color: white;
             padding: 20px;
             text-align: center;
@@ -268,7 +271,7 @@
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #2c3e50;
+            background-color: #0d3160;
             color: white;
             border-top: 1px solid #ddd;
         }
@@ -286,12 +289,12 @@
         }
 
         footer .social-icons a:hover {
-            color: #1abc9c;
+            background-color: #0d3160;
+
         }
 
         /* Mobile Styles */
         @media (max-width: 768px) {
-
             header {
                 flex-direction: column;
                 padding: 10px;
@@ -311,7 +314,6 @@
                 font-size: 14px;
                 padding: 5px 10px;
             }
-
 
             section.main {
                 flex-direction: column;
@@ -360,7 +362,9 @@
             section.contact .card .info p {
                 font-size: 0.9rem;
             }
-
+            section.contact .card .h2 {
+                color: #ddd;
+            }
             footer .footer-title {
                 font-size: 0.9rem;
             }
@@ -377,6 +381,10 @@
 
             header .navigation a {
                 font-size: 0.7rem;
+            }
+
+            section.main .bio {
+                padding-top: 80px;
             }
 
             section.main .bio h2 {
@@ -452,7 +460,9 @@
                     Previously, I played a key role in military engineering projects as a Mechanical Design Engineer, managing design reviews and ensuring successful project execution. My freelance experience includes working on robotics and automation projects, such as the Humanoid Shams Robot, smart parking systems, and MEP systems in Egypt and Saudi Arabia. I also have a passion for teaching and have worked as a private instructor, offering courses in stress analysis, mechanics, and electronics.
                 
                     My expertise spans R&D, simulation, and design, making me a versatile professional in product innovation, compliance testing, and engineering solutions. I thrive on solving complex problems and delivering results that drive progress in the field.
-                </small>            <a href="Projects.html" class="main-btn">View my work</a>
+                </small>
+            </h2>
+            <a href="Projects.html" class="main-btn">View my work</a>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/ahmed-mahgoub-528918188?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BNyxD3MvDS6ysbdTbv9TFqA%3D%3D"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:ahmed.mahgoubu@gmail.com"><i class="far fa-envelope"></i></a>
@@ -541,6 +551,60 @@
                     <a href="https://drive.google.com/drive/folders/1ZdLzQUk5tEevAq3n_3rCq0NgJ7g-QGWt?usp=sharing" class="more-details">Documentation</a>
                 </div>
             </div>
+
+            <!-- Project 4: Desert Reclamation Systems -->
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-tint"></i> <!-- Example icon for water/agriculture -->
+                </div>
+                <div class="info">
+                    <h3>Desert Reclamation Systems</h3>
+                    <p><strong>System Design | Fluid Mechanics, Energy Systems</strong></p>
+                    <p><strong>Location: West-West Minya, Egypt</strong></p>
+                    <ul>
+                        <li>Designed a pumping station, permanent magnet generator, and aluminum vice for agricultural development.</li>
+                        <li>Relevance: Applicable to fluid mechanics, energy systems, and mechanical design.</li>
+                        <li>Skills Demonstrated: System design, material selection, and project execution.</li>
+                    </ul>
+                  
+                </div>
+            </div>
+
+            <!-- Project 5: Permanent Magnet Generator (PMG) -->
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-bolt"></i> <!-- Example icon for energy -->
+                </div>
+                <div class="info">
+                    <h3>Permanent Magnet Generator (PMG)</h3>
+                    <p><strong>Energy Conversion | Sustainable Power Generation</strong></p>
+                    <ul>
+                        <li>Developed a Permanent Magnet Generator (PMG) for energy conversion, focusing on sustainable power generation.</li>
+                        <li>Key aspects included electromagnetic design and material selection for high efficiency and durability.</li>
+                        <li>Relevance: Applicable to energy systems and sustainable engineering.</li>
+                        <li>Skills Demonstrated: Electromagnetic design, material selection, and optimization.</li>
+                    </ul>
+                  
+                </div>
+            </div>
+
+            <!-- Project 6: Aluminum Vice -->
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-tools"></i> <!-- Example icon for tools -->
+                </div>
+                <div class="info">
+                    <h3>Aluminum Vice</h3>
+                    <p><strong>Precision Work-Holding Tool | Mechanical Design</strong></p>
+                    <ul>
+                        <li>Designed and fabricated an aluminum vice as a precision work-holding tool for machining applications.</li>
+                        <li>Key aspects included mechanical design, stress analysis, and material selection for lightweight and corrosion-resistant properties.</li>
+                        <li>Relevance: Applicable to mechanical design and manufacturing.</li>
+                        <li>Skills Demonstrated: Mechanical design, stress analysis, and CNC machining.</li>
+                    </ul>
+                   
+                </div>
+            </div>
         </div>
     </section>
 
@@ -563,6 +627,8 @@
                 <div class="info">
                     <h3>Email</h3>
                     <p>ahmed.mahgoubu@gmail.com</p>
+                    <a href="mailto:ahmed.mahgoubu@gmail.com"><i class="far fa-envelope"></i></a>
+
                 </div>
             </div>
         </div>
