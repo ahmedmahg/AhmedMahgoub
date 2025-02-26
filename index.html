@@ -7,46 +7,47 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Ahmed Mahgoub</title>
     <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
+     /* General Styling */
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            line-height: 1.6;
-            background-color: #f9f9f9;
-            color: #333;
+            scroll-behavior: smooth;
         }
 
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
         header {
+            width: 100%;
+            background: #2c3e50;
+            padding: 15px 30px;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            padding: 15px;
-            background-color: #2c3e50;
-            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
 
         header .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 10px;
             color: white;
+            font-size: 24px;
+            font-weight: bold;
             text-decoration: none;
-        }
-
-        header .navigation {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
         }
 
         header .navigation a {
-            text-decoration: none;
             color: white;
-            font-size: 0.9rem;
-            padding: 5px 10px;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 18px;
             transition: 0.3s;
         }
 
@@ -292,129 +293,118 @@
             color: #1abc9c;
         }
 
-        /* Mobile Styles */
+         /* Mobile Styles */
         @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            header .logo {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
             header .navigation {
                 flex-direction: column;
                 align-items: center;
             }
 
             header .navigation a {
-                font-size: 0.8rem;
+                font-size: 14px;
+                padding: 5px 10px;
             }
 
-            section.main {
-                flex-direction: column;
-                text-align: center;
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: static;
+                padding-top: 20px;
+            }
+
+            .sidebar a {
+                font-size: 16px;
+                padding: 10px;
+            }
+
+            .content {
+                margin-left: 0;
+                padding: 20px;
+                width: 100%;
+            }
+
+            .container {
                 padding: 20px;
             }
 
-            section.main .bio {
-                padding-right: 0;
-                margin-bottom: 20px;
+            .clearfix {
+                flex-direction: column;
+                align-items: flex-start;
             }
 
-            section.main .photo {
-                flex: 0 0 auto;
-                text-align: center;
+            .image {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 15px;
             }
 
-            section.main .photo img {
-                max-width: 200px;
+            h1 {
+                font-size: 22px;
             }
 
-            .cards .title {
-                font-size: 1.5rem;
+            h2 {
+                font-size: 18px;
             }
 
-            .cards .card .info h3 {
-                font-size: 1.2rem;
+            .funding {
+                font-size: 14px;
             }
 
-            .cards .card .info p {
-                font-size: 0.9rem;
+            .footer {
+                position: static;
+                padding: 10px;
             }
 
-            .cards .card .info ul li {
-                font-size: 0.8rem;
+            .footer-title {
+                font-size: 14px;
             }
 
-            section.contact .title {
-                font-size: 1.5rem;
-            }
-
-            section.contact .card .info h3 {
-                font-size: 1.2rem;
-            }
-
-            section.contact .card .info p {
-                font-size: 0.9rem;
-            }
-
-            footer .footer-title {
-                font-size: 0.9rem;
-            }
-
-            footer .social-icons a {
-                font-size: 1rem;
+            .social-icons a {
+                font-size: 16px;
             }
         }
 
         @media (max-width: 480px) {
             header .logo {
-                font-size: 1.2rem;
+                font-size: 18px;
             }
 
             header .navigation a {
-                font-size: 0.7rem;
+                font-size: 12px;
             }
 
-            section.main .bio h2 {
-                font-size: 1.5rem;
+            .sidebar a {
+                font-size: 14px;
             }
 
-            section.main .bio h2 span {
-                font-size: 1.2rem;
+            h1 {
+                font-size: 20px;
             }
 
-            section.main .bio h2 small {
-                font-size: 0.9rem;
+            h2 {
+                font-size: 16px;
             }
 
-            .cards .title {
-                font-size: 1.2rem;
+            .funding {
+                font-size: 12px;
             }
 
-            .cards .card .info h3 {
-                font-size: 1rem;
+            .footer-title {
+                font-size: 12px;
             }
 
-            .cards .card .info p {
-                font-size: 0.8rem;
-            }
-
-            .cards .card .info ul li {
-                font-size: 0.7rem;
-            }
-
-            section.contact .title {
-                font-size: 1.2rem;
-            }
-
-            section.contact .card .info h3 {
-                font-size: 1rem;
-            }
-
-            section.contact .card .info p {
-                font-size: 0.8rem;
-            }
-
-            footer .footer-title {
-                font-size: 0.8rem;
-            }
-
-            footer .social-icons a {
-                font-size: 0.9rem;
+            .social-icons a {
+                font-size: 14px;
             }
         }
     </style>
