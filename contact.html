@@ -24,18 +24,43 @@
         }
 
         /* Header */
-        header {
-            background-color: #0d3160;
-            color: white;
+          /* Header Styles */
+       /* Header */
+       header {
             width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 999;
+            background-color: #0d3160;
+            padding: 15px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 100px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        header .navigation {
+            padding-right: 50px;
+        }
+
+        header .navigation a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        header .navigation a:hover {
+            background: #1abc9c;
+            border-radius: 5px;
         }
 
         .logo {
@@ -134,11 +159,26 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
+        @media (max-width: 768px) 
+        {
             header {
                 flex-direction: column;
-                text-align: center;
-                padding: 15px;
+                padding: 10px;
+            }
+
+            header .logo {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            header .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header .navigation a {
+                font-size: 14px;
+                padding: 5px 10px;
             }
 
             .navigation {
@@ -149,6 +189,15 @@
                 flex-direction: column;
                 align-items: center;
             }
+              @media (max-width: 480px) {
+            header .logo {
+                font-size: 1.2rem;
+            }
+
+            header .navigation a {
+                font-size: 0.7rem;
+            }
+                  }
         }
     </style>
 </head>
