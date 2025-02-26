@@ -18,7 +18,8 @@
             color: #333;
         }
 
-      header {
+        /* Header Styles */
+        header {
             width: 100%;
             background: #2c3e50;
             padding: 15px 30px;
@@ -290,16 +291,27 @@
 
         /* Mobile Styles */
         @media (max-width: 768px) {
-           header .logo {
-                font-size: 18px;
+
+            header {
+                flex-direction: column;
+                padding: 10px;
             }
-             section.main .bio {
-            padding: 40px;
-           }
+
+            header .logo {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            header .navigation {
+                flex-direction: column;
+                align-items: center;
+            }
 
             header .navigation a {
-                font-size: 12px;
+                font-size: 14px;
+                padding: 5px 10px;
             }
+
 
             section.main {
                 flex-direction: column;
@@ -434,8 +446,13 @@
     <section class="main">
         <div class="bio">
             <h2>Hello, I'm Ahmed<br><span>Research And Development Engineer</span><br>
-                <small>Ahmed Mahgoub is a Research and Development Engineer with expertise in mechanical design, thermal systems, and product development across multiple industries. Currently, he works at Elsewedy Electric, a multinational leader in energy and infrastructure solutions, where he focuses on busway system optimization, compliance testing, and material selection. Concurrently, he contributes to Carrier Midea Egypt, specializing in HVAC system design, circuit simulation, and cross-functional collaboration with global teams. Previously, he played a crucial role in military engineering projects as a Mechanical Design Engineer, managing design reviews and project execution. His freelance experience spans robotics and automation, working on projects like the Humanoid Shams Robot, smart parking solutions, and MEP systems in Egypt and KSA. With a passion for education, Ahmed has also served as a private instructor, teaching courses in stress analysis, mechanics, and electronics. His diverse expertise in R&D, simulation, and design makes him a valuable asset in product innovation, compliance testing, and engineering solutions...</small></h2>
-            <a href="Projects.html" class="main-btn">View my work</a>
+                <small>
+                    I am a Research and Development Engineer with a strong background in mechanical design, thermal systems, and product development across various industries. Currently, I work at Elsewedy Electric, a global leader in energy and infrastructure solutions, where I focus on optimizing busway systems, conducting compliance testing, and selecting materials for high-performance applications. In addition, I contribute to Carrier Midea Egypt, specializing in HVAC system design, circuit simulation, and collaborating with international teams to deliver innovative solutions.
+                
+                    Previously, I played a key role in military engineering projects as a Mechanical Design Engineer, managing design reviews and ensuring successful project execution. My freelance experience includes working on robotics and automation projects, such as the Humanoid Shams Robot, smart parking systems, and MEP systems in Egypt and Saudi Arabia. I also have a passion for teaching and have worked as a private instructor, offering courses in stress analysis, mechanics, and electronics.
+                
+                    My expertise spans R&D, simulation, and design, making me a versatile professional in product innovation, compliance testing, and engineering solutions. I thrive on solving complex problems and delivering results that drive progress in the field.
+                </small>            <a href="Projects.html" class="main-btn">View my work</a>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/ahmed-mahgoub-528918188?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BNyxD3MvDS6ysbdTbv9TFqA%3D%3D"><i class="fab fa-linkedin"></i></a>
                 <a href="mailto:ahmed.mahgoubu@gmail.com"><i class="far fa-envelope"></i></a>
