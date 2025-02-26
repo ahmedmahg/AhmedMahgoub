@@ -16,16 +16,16 @@
         }
 
         body {
-            font-family: 'Times New Roman', Times, serif;
+            font-family: Arial, sans-serif;
             background-color: #f9f9f9;
             color: #333;
             line-height: 1.6;
         }
 
-        /* Header */
+        /* Header Styles */
         header {
             width: 100%;
-            background: #2c3e50;
+            background-color: #0d3160;
             padding: 15px 30px;
             display: flex;
             justify-content: space-between;
@@ -59,9 +59,9 @@
         /* Sidebar */
         .sidebar {
             width: 250px;
-            background: #2c3e50;
+            background-color: #0d3160;
             height: 100vh;
-            padding-top: 60px;
+            padding-top: 70px;
             position: fixed;
             left: 0;
             top: 60px;
@@ -201,6 +201,7 @@
                 padding: 5px 10px;
             }
 
+
             .sidebar {
                 width: 100%;
                 height: auto;
@@ -322,254 +323,255 @@
     </div>
 
     <!-- Main Content -->
-    <div class="content">
-        
-        <!-- Micro Jet Engine Section -->
-        <div id="jet-engine" class="container">
-            <h1>Micro Jet Engine Design and Analysis</h1>
-            <p class="funding">Funded by: Egyptian Academy of Scientific Research and Technology</p>
-            <h2>Abstract</h2>
-            <div class="clearfix">
-                <p>
-                    This research investigates the design, aerodynamic optimization, and structural analysis of a micro jet engine. 
-                    The study aims to develop a compact, high-performance propulsion system using computational tools and experimental validation.
-                </p>
-                <img src="images/JET.png" alt="Micro Jet Engine" class="image">
-            </div>
-            <h2>Project Overview</h2>
+   <!-- Main Content -->
+<div class="content">
+    
+    <!-- Micro Jet Engine Section -->
+    <div id="jet-engine" class="container">
+        <h1>Micro Jet Engine Design and Analysis</h1>
+        <p class="funding">Funded by: Egyptian Academy of Scientific Research and Technology</p>
+        <h2>Abstract</h2>
+        <div class="clearfix">
             <p>
-                This project focuses on the design and performance analysis of a micro jet engine, covering key aspects such as:
+                This research investigates the design, aerodynamic optimization, and structural analysis of a micro jet engine. 
+                The study aims to develop a compact, high-performance propulsion system using computational tools and experimental validation.
             </p>
-            <ul>
-                <li>Component selection</li>
-                <li>Aerodynamic design</li>
-                <li>Structural analysis</li>
-                <li>Simulation validation</li>
-            </ul>
-            <p>
-                The goal is to develop an efficient and cost-effective engine by leveraging computational tools and industry-standard methodologies.
-            </p>
-            <h2>1. Design and Selection Steps</h2>
-            <p>
-                Each component of the engine was carefully designed and selected based on performance requirements, cost-effectiveness, and manufacturability. 
-                Key software tools used for design verification and optimization:
-            </p>
-            <ul>
-                <li><b>CF-Turbo</b></li>
-                <li><b>Ansys</b></li>
-                <li><b>MATLAB</b></li>
-            </ul>
-            <h3>1.1 Compressor Design</h3>
-            <ul>
-                <li>A turbocharger compressor impeller from a BorgWarner diesel engine was selected for cost efficiency and high surface quality.</li>
-                <li>Key design parameters analyzed:
-                    <ul>
-                        <li>Blade angles</li>
-                        <li>Diameter</li>
-                        <li>Performance maps</li>
-                    </ul>
-                </li>
-                <li>CF-Turbo software was used for:
-                    <ul>
-                        <li>Velocity triangle simulations</li>
-                        <li>Mean line calculations</li>
-                        <li>Beta-angle distributions</li>
-                    </ul>
-                </li>
-            </ul>
-            <h3>1.2 Turbine Design</h3>
-            <ul>
-                <li>A small-scale axial turbine was designed using CF-Turbo 2020 R2.3 for mean-line modeling.</li>
-                <li>Detailed aerodynamic analysis was performed on nozzle and rotor blades, covering:
-                    <ul>
-                        <li>Flow coefficient</li>
-                        <li>Loading coefficient</li>
-                        <li>Reaction degree calculations</li>
-                    </ul>
-                </li>
-                <li>The design was compared with experimental data from Shapiro et al. (1957) for efficiency estimation.</li>
-                <li><b>Final turbine blade count:</b>
-                    <ul>
-                        <li>Rotor - 10 blades</li>
-                        <li>Stator - 13 blades</li>
-                    </ul>
-                </li>
-            </ul>
-            <h2>2. Simulation and Structural Analysis</h2>
-            <p>
-                To validate the performance and durability of the designed micro jet engine, computational simulations were performed using:
-            </p>
-            <ul>
-                <li><b>Ansys</b></li>
-                <li><b>CF-Turbo</b></li>
-            </ul>
-            <h3>2.1 Steady-State Stress Analysis (Ansys Static Structural)</h3>
-            <ul>
-                <li><b>Mesh generation:</b> A fine mesh was created for accurate results.</li>
-                <li><b>Boundary conditions:</b>
-                    <ul>
-                        <li>Rotational speed: 90,000 rpm</li>
-                        <li>Applied pressure: 0.1 MPa on blade face and leading edge</li>
-                        <li>Operating temperature: 650°C</li>
-                    </ul>
-                </li>
-                <li><b>Results:</b>
-                    <ul>
-                        <li>Max von Mises stress: 349.2 MPa (at blade root) – within acceptable limits.</li>
-                        <li>Max radial deformation: 0.3379 mm at blade tip, leading to an estimated 0.43 mm gap between the turbine cylinder and rotor after deformation.</li>
-                    </ul>
-                </li>
-            </ul>
-            <h3>2.2 Modal Analysis and Critical Speed Prediction</h3>
-            <ul>
-                <li>Modal analysis was conducted to determine the natural frequencies of the turbine and identify potential resonance conditions.</li>
-                <li>Campbell diagram analysis was performed to evaluate critical speeds and ensure safe operation up to 120,000 rpm.</li>
-                <li>Mode shapes analysis was used to visualize structural deformations under different vibrational modes.</li>
-            </ul>
-            <h2>3. Aerodynamic and Flow Simulation (CFD & MATLAB)</h2>
-            <p>
-                To validate the airflow and thermal behavior, Computational Fluid Dynamics (CFD) simulations were performed.
-            </p>
-            <h3>3.1 CFD Simulation (ANSYS Fluent)</h3>
-            <ul>
-                <li>A 3D model of the compressor and turbine was simulated using ANSYS Fluent.</li>
-                <li><b>Turbulence modeling:</b> k-ω SST model was used for accurate flow predictions.</li>
-                <li><b>Key results:</b>
-                    <ul>
-                        <li>Pressure distribution, velocity profiles, and temperature variations were analyzed.</li>
-                        <li>Compressor efficiency: Predicted performance matched the estimated values from turbocharger catalogs.</li>
-                        <li>Turbine efficiency: Estimated at 72.5%, in agreement with theoretical calculations.</li>
-                    </ul>
-                </li>
-            </ul>
-            <h3>3.2 MATLAB Simulation for Cycle Performance</h3>
-            <ul>
-                <li>A thermodynamic Brayton cycle simulation was conducted in MATLAB to evaluate:
-                    <ul>
-                        <li>Specific thrust and thermal efficiency under different operating conditions.</li>
-                        <li>Impact of ambient temperature and pressure variations on performance.</li>
-                        <li>Fuel consumption estimation for different flight altitudes.</li>
-                    </ul>
-                </li>
-            </ul>
-            <br>
-            <p><a href="https://drive.google.com/drive/folders/1P-ZJqMC50FIAhVODEYGUPdZZ5wKkuSZ4?usp=sharing" target="_blank"><strong>  →     For all Data and Simulations Click</a></p>
+            <img src="images/JET.png" alt="Micro Jet Engine" class="image">
         </div>
-
-        <!-- Hybrid Electric Vehicle Section -->
-        <div id="hev" class="container">
-            <h1>HEV Modelling in Matlab-Simulink Environment and Control Strategy Design</h1>
-            <h2>Abstract</h2>
-            <div class="clearfix">
-                <p>
-                    The objective of this paper is to develop a functional model of a Hybrid Electric Vehicle (HEV) 
-                    architecture in SIMULINK, which provides a streamlined approach for multi-domain simulation. 
-                    The selected architecture is a P2 Parallel Hybrid vehicle. The paper adopts a “gradual complexity” approach, 
-                    initially constructing models for a Battery Electric Vehicle (BEV) and a Conventional Vehicle (CV). 
-                    These initial models facilitate the development of a third HEV model by reusing compatible components 
-                    and control strategies, ensuring consistency and efficiency in model design.
-                </p>
-                <img src="images/HEV.png" alt="Hybrid Electric Vehicle" class="image">
-            </div>
-            <h2>Keywords</h2>
-            <p>Hybrid electric vehicle (HEV), backstepping sliding mode control, fuel cell (FC), ultra-capacitor (UC).</p>
-            <h2>Introduction</h2>
-            <p>
-                Simulation and modeling in engineering are essential tools, particularly within the automotive powertrain sector, 
-                where real-world vehicle testing is costly and time-intensive. Computer-based vehicle models enable efficient 
-                analysis of underlying system behavior, reducing costs and expediting the testing process.
-            </p>
-            <h2>The System</h2>
-            <h3>A. FTP75 (2474 seconds, cycle)</h3>
-            <p>
-                The FTP-75 (Federal Test Procedure 75) is a standardized driving cycle primarily used in the U.S. to evaluate 
-                the performance of passenger cars in urban driving conditions. It simulates typical city driving patterns, 
-                characterized by frequent stops, accelerations, and decelerations at relatively low speeds.
-            </p>
-            <h3>B. Environment</h3>
-            <p>
-                The Environment block in Simulink plays a crucial role in simulating external conditions that impact a vehicle's 
-                performance, such as temperature, altitude, humidity, wind, and road conditions.
-            </p>
-            <h3>C. Longitudinal Driver</h3>
-            <p>
-                The Longitudinal Driver block in Simulink models the driver’s role in controlling a vehicle’s forward and backward 
-                motion by managing throttle and braking inputs.
-            </p>
-            <h3>D. Controller</h3>
-            <p>
-                In vehicle simulation models, controllers manage the vehicle's dynamic behavior, particularly in controlling 
-                speed, acceleration, and braking using strategies like PID and Model Predictive Control (MPC).
-            </p>
-            <h3>E. The Passenger Car</h3>
-            <p>
-                The Passenger Car block in Simulink simulates the behavior and dynamics of Hybrid Electric Vehicles (HEVs), 
-                integrating internal combustion engines (ICE) and electric motors within the powertrain.
-            </p>
-            <h3>F. Visualization</h3>
-            <p>
-                In the HEV P02 model in MATLAB/Simulink, visualization of key parameters such as Battery Current, SOC, Fuel 
-                Economy, Speed, and Torque is crucial for evaluating the hybrid vehicle's performance.
-            </p>
-            <br>
-            <p><a href="https://drive.google.com/drive/folders/1qxwzy5NNhLi53ScuqUKGYv3nLJHEbU_e?usp=sharing" target="_blank"><strong>  →     For all Data and Simulations Click</a></p>
-        </div>
-
-        <!-- Humanoid Shams Robot Section -->
-        <div id="humanoid" class="container">
-            <h1>3. Humanoid Shams Robot </h1>
-            <p class="funding">Funded by: Ain Shams University</p>
-            <h2>Project Overview</h2>
-            <div class="clearfix">
-                <p>
-                    Designed and manufactured a humanoid robot for nursing duties at Ain Shams Specialist Hospital. 
-                    Responsibilities included mechanical design, motor specification calculations, and overseeing 3D-printed components.
-                </p>
-                <img src="images/ROB.png" alt="Humanoid Shams Robot" class="image">
-            </div>
-            <h2>Relevance</h2>
-            <p>Applicable to robotics, mechatronics, and manufacturing.</p>
-            <h2>Skills Demonstrated</h2>
-            <p>Mechanical design, prototyping, and system integration.</p>
-            <br>
-            <p><a href="https://drive.google.com/drive/folders/1ZdLzQUk5tEevAq3n_3rCq0NgJ7g-QGWt?usp=sharing" target="_blank">Documentation (Click)</a></p>
-        </div>
-
-        <!-- Desert Reclamation Systems Section -->
-        <div id="desert-reclamation" class="container">
-            <h1> Desert Reclamation Systems</h1>
-            <h2>Project Overview</h2>
-            <div class="clearfix">
-                <p>
-                    Designed a pumping station, permanent magnet generator, and aluminum vice for agricultural development in West-West Minya, Egypt.
-                </p>
-            </div>
-            <h2>Relevance</h2>
-            <p>Applicable to fluid mechanics, energy systems, and mechanical design.</p>
-            <h2>Skills Demonstrated</h2>
-            <p>System design, material selection, and project execution.</p>
-        </div>
-
-        <!-- Permanent Magnet Generator (PMG) Section -->
-        <div id="pmg" class="container">
-            <h1>Permanent Magnet Generator (PMG)</h1>
-            <p>Developed a Permanent Magnet Generator (PMG) for energy conversion, focusing on sustainable power generation. Key aspects included:</p>
-            <ul>
-                <li><strong>Electromagnetic design:</strong> Optimized rotor-stator configuration for maximum efficiency.</li>
-                <li><strong>Material selection:</strong> Ensured high-performance magnets and core materials for improved durability and power output.</li>
-            </ul>
-        </div>
-
-        <!--  Project: Aluminum Vice Section -->
-        <div id="aluminum-vice" class="container">
-            <h1> Project: Aluminum Vice</h1>
-            <p>Designed and fabricated an aluminum vice as a precision work-holding tool for machining applications. Project highlights:</p>
-            <ul>
-                <li><strong>Mechanical design and stress analysis:</strong> Ensured optimal clamping force and durability.</li>
-                <li><strong>Material selection:</strong> Used aluminum for lightweight and corrosion-resistant properties.</li>
-                <li><strong>Manufacturing process:</strong> Employed CNC machining and manual finishing for high accuracy.</li>
-            </ul>
-        </div>
+        <h2>Project Overview</h2>
+        <p>
+            This project focuses on the design and performance analysis of a micro jet engine, covering key aspects such as:
+        </p>
+        <ul>
+            <li>Component selection</li>
+            <li>Aerodynamic design</li>
+            <li>Structural analysis</li>
+            <li>Simulation validation</li>
+        </ul>
+        <p>
+            The goal is to develop an efficient and cost-effective engine by leveraging computational tools and industry-standard methodologies.
+        </p>
+        <h2>1. Design and Selection Steps</h2>
+        <p>
+            Each component of the engine was carefully designed and selected based on performance requirements, cost-effectiveness, and manufacturability. 
+            Key software tools used for design verification and optimization:
+        </p>
+        <ul>
+            <li>CF-Turbo</li>
+            <li>Ansys</li>
+            <li>MATLAB</li>
+        </ul>
+        <h3>1.1 Compressor Design</h3>
+        <ul>
+            <li>A turbocharger compressor impeller from a BorgWarner diesel engine was selected for cost efficiency and high surface quality.</li>
+            <li>Key design parameters analyzed:
+                <ul>
+                    <li>Blade angles</li>
+                    <li>Diameter</li>
+                    <li>Performance maps</li>
+                </ul>
+            </li>
+            <li>CF-Turbo software was used for:
+                <ul>
+                    <li>Velocity triangle simulations</li>
+                    <li>Mean line calculations</li>
+                    <li>Beta-angle distributions</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>1.2 Turbine Design</h3>
+        <ul>
+            <li>A small-scale axial turbine was designed using CF-Turbo 2020 R2.3 for mean-line modeling.</li>
+            <li>Detailed aerodynamic analysis was performed on nozzle and rotor blades, covering:
+                <ul>
+                    <li>Flow coefficient</li>
+                    <li>Loading coefficient</li>
+                    <li>Reaction degree calculations</li>
+                </ul>
+            </li>
+            <li>The design was compared with experimental data from Shapiro et al. (1957) for efficiency estimation.</li>
+            <li>Final turbine blade count:
+                <ul>
+                    <li>Rotor - 10 blades</li>
+                    <li>Stator - 13 blades</li>
+                </ul>
+            </li>
+        </ul>
+        <h2>2. Simulation and Structural Analysis</h2>
+        <p>
+            To validate the performance and durability of the designed micro jet engine, computational simulations were performed using:
+        </p>
+        <ul>
+            <li>Ansys</li>
+            <li>CF-Turbo</li>
+        </ul>
+        <h3>2.1 Steady-State Stress Analysis (Ansys Static Structural)</h3>
+        <ul>
+            <li>Mesh generation: A fine mesh was created for accurate results.</li>
+            <li>Boundary conditions:
+                <ul>
+                    <li>Rotational speed: 90,000 rpm</li>
+                    <li>Applied pressure: 0.1 MPa on blade face and leading edge</li>
+                    <li>Operating temperature: 650°C</li>
+                </ul>
+            </li>
+            <li>Results:
+                <ul>
+                    <li>Max von Mises stress: 349.2 MPa (at blade root) – within acceptable limits.</li>
+                    <li>Max radial deformation: 0.3379 mm at blade tip, leading to an estimated 0.43 mm gap between the turbine cylinder and rotor after deformation.</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>2.2 Modal Analysis and Critical Speed Prediction</h3>
+        <ul>
+            <li>Modal analysis was conducted to determine the natural frequencies of the turbine and identify potential resonance conditions.</li>
+            <li>Campbell diagram analysis was performed to evaluate critical speeds and ensure safe operation up to 120,000 rpm.</li>
+            <li>Mode shapes analysis was used to visualize structural deformations under different vibrational modes.</li>
+        </ul>
+        <h2>3. Aerodynamic and Flow Simulation (CFD & MATLAB)</h2>
+        <p>
+            To validate the airflow and thermal behavior, Computational Fluid Dynamics (CFD) simulations were performed.
+        </p>
+        <h3>3.1 CFD Simulation (ANSYS Fluent)</h3>
+        <ul>
+            <li>A 3D model of the compressor and turbine was simulated using ANSYS Fluent.</li>
+            <li>Turbulence modeling: k-ω SST model was used for accurate flow predictions.</li>
+            <li>Key results:
+                <ul>
+                    <li>Pressure distribution, velocity profiles, and temperature variations were analyzed.</li>
+                    <li>Compressor efficiency: Predicted performance matched the estimated values from turbocharger catalogs.</li>
+                    <li>Turbine efficiency: Estimated at 72.5%, in agreement with theoretical calculations.</li>
+                </ul>
+            </li>
+        </ul>
+        <h3>3.2 MATLAB Simulation for Cycle Performance</h3>
+        <ul>
+            <li>A thermodynamic Brayton cycle simulation was conducted in MATLAB to evaluate:
+                <ul>
+                    <li>Specific thrust and thermal efficiency under different operating conditions.</li>
+                    <li>Impact of ambient temperature and pressure variations on performance.</li>
+                    <li>Fuel consumption estimation for different flight altitudes.</li>
+                </ul>
+            </li>
+        </ul>
+        <br>
+        <p><a href="https://drive.google.com/drive/folders/1P-ZJqMC50FIAhVODEYGUPdZZ5wKkuSZ4?usp=sharing" target="_blank">→ For all Data and Simulations Click</a></p>
     </div>
+
+    <!-- Hybrid Electric Vehicle Section -->
+    <div id="hev" class="container">
+        <h1>HEV Modelling in Matlab-Simulink Environment and Control Strategy Design</h1>
+        <h2>Abstract</h2>
+        <div class="clearfix">
+            <p>
+                The objective of this paper is to develop a functional model of a Hybrid Electric Vehicle (HEV) 
+                architecture in SIMULINK, which provides a streamlined approach for multi-domain simulation. 
+                The selected architecture is a P2 Parallel Hybrid vehicle. The paper adopts a “gradual complexity” approach, 
+                initially constructing models for a Battery Electric Vehicle (BEV) and a Conventional Vehicle (CV). 
+                These initial models facilitate the development of a third HEV model by reusing compatible components 
+                and control strategies, ensuring consistency and efficiency in model design.
+            </p>
+            <img src="images/HEV.png" alt="Hybrid Electric Vehicle" class="image">
+        </div>
+        <h2>Keywords</h2>
+        <p>Hybrid electric vehicle (HEV), backstepping sliding mode control, fuel cell (FC), ultra-capacitor (UC).</p>
+        <h2>Introduction</h2>
+        <p>
+            Simulation and modeling in engineering are essential tools, particularly within the automotive powertrain sector, 
+            where real-world vehicle testing is costly and time-intensive. Computer-based vehicle models enable efficient 
+            analysis of underlying system behavior, reducing costs and expediting the testing process.
+        </p>
+        <h2>The System</h2>
+        <h3>A. FTP75 (2474 seconds, cycle)</h3>
+        <p>
+            The FTP-75 (Federal Test Procedure 75) is a standardized driving cycle primarily used in the U.S. to evaluate 
+            the performance of passenger cars in urban driving conditions. It simulates typical city driving patterns, 
+            characterized by frequent stops, accelerations, and decelerations at relatively low speeds.
+        </p>
+        <h3>B. Environment</h3>
+        <p>
+            The Environment block in Simulink plays a crucial role in simulating external conditions that impact a vehicle's 
+            performance, such as temperature, altitude, humidity, wind, and road conditions.
+        </p>
+        <h3>C. Longitudinal Driver</h3>
+        <p>
+            The Longitudinal Driver block in Simulink models the driver’s role in controlling a vehicle’s forward and backward 
+            motion by managing throttle and braking inputs.
+        </p>
+        <h3>D. Controller</h3>
+        <p>
+            In vehicle simulation models, controllers manage the vehicle's dynamic behavior, particularly in controlling 
+            speed, acceleration, and braking using strategies like PID and Model Predictive Control (MPC).
+        </p>
+        <h3>E. The Passenger Car</h3>
+        <p>
+            The Passenger Car block in Simulink simulates the behavior and dynamics of Hybrid Electric Vehicles (HEVs), 
+            integrating internal combustion engines (ICE) and electric motors within the powertrain.
+        </p>
+        <h3>F. Visualization</h3>
+        <p>
+            In the HEV P02 model in MATLAB/Simulink, visualization of key parameters such as Battery Current, SOC, Fuel 
+            Economy, Speed, and Torque is crucial for evaluating the hybrid vehicle's performance.
+        </p>
+        <br>
+        <p><a href="https://drive.google.com/drive/folders/1qxwzy5NNhLi53ScuqUKGYv3nLJHEbU_e?usp=sharing" target="_blank">→ For all Data and Simulations Click</a></p>
+    </div>
+
+    <!-- Humanoid Shams Robot Section -->
+    <div id="humanoid" class="container">
+        <h1>Humanoid Shams Robot</h1>
+        <p class="funding">Funded by: Ain Shams University</p>
+        <h2>Project Overview</h2>
+        <div class="clearfix">
+            <p>
+                Designed and manufactured a humanoid robot for nursing duties at Ain Shams Specialist Hospital. 
+                Responsibilities included mechanical design, motor specification calculations, and overseeing 3D-printed components.
+            </p>
+            <img src="images/ROB.png" alt="Humanoid Shams Robot" class="image">
+        </div>
+        <h2>Relevance</h2>
+        <p>Applicable to robotics, mechatronics, and manufacturing.</p>
+        <h2>Skills Demonstrated</h2>
+        <p>Mechanical design, prototyping, and system integration.</p>
+        <br>
+        <p><a href="https://drive.google.com/drive/folders/1ZdLzQUk5tEevAq3n_3rCq0NgJ7g-QGWt?usp=sharing" target="_blank">→ Documentation (Click)</a></p>
+    </div>
+
+    <!-- Desert Reclamation Systems Section -->
+    <div id="desert-reclamation" class="container">
+        <h1>Desert Reclamation Systems</h1>
+        <h2>Project Overview</h2>
+        <div class="clearfix">
+            <p>
+                Designed a pumping station, permanent magnet generator, and aluminum vice for agricultural development in West-West Minya, Egypt.
+            </p>
+        </div>
+        <h2>Relevance</h2>
+        <p>Applicable to fluid mechanics, energy systems, and mechanical design.</p>
+        <h2>Skills Demonstrated</h2>
+        <p>System design, material selection, and project execution.</p>
+    </div>
+
+    <!-- Permanent Magnet Generator (PMG) Section -->
+    <div id="pmg" class="container">
+        <h1>Permanent Magnet Generator (PMG)</h1>
+        <p>Developed a Permanent Magnet Generator (PMG) for energy conversion, focusing on sustainable power generation. Key aspects included:</p>
+        <ul>
+            <li>Electromagnetic design: Optimized rotor-stator configuration for maximum efficiency.</li>
+            <li>Material selection: Ensured high-performance magnets and core materials for improved durability and power output.</li>
+        </ul>
+    </div>
+
+    <!-- Project: Aluminum Vice Section -->
+    <div id="aluminum-vice" class="container">
+        <h1>Project: Aluminum Vice</h1>
+        <p>Designed and fabricated an aluminum vice as a precision work-holding tool for machining applications. Project highlights:</p>
+        <ul>
+            <li>Mechanical design and stress analysis: Ensured optimal clamping force and durability.</li>
+            <li>Material selection: Used aluminum for lightweight and corrosion-resistant properties.</li>
+            <li>Manufacturing process: Employed CNC machining and manual finishing for high accuracy.</li>
+        </ul>
+    </div>
+</div>
 </body>
 </html>
