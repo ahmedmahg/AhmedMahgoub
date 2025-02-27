@@ -55,12 +55,12 @@
             border-radius: 5px;
         }
 
-        /* Main Section */
+                /* Main Section */
         section.main {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 40px 20px;
+            padding: 60px 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
@@ -68,16 +68,19 @@
         section.main .bio {
             flex: 1;
             padding-right: 40px;
+            
         }
 
         section.main .bio h2 {
             font-size: 2rem;
             margin-bottom: 10px;
+            
         }
 
         section.main .bio h2 span {
             font-size: 1.5rem;
             color: #1abc9c;
+
         }
 
         section.main .bio h2 small {
@@ -85,6 +88,7 @@
             color: #555;
             display: block;
             margin-top: 10px;
+            padding-top: 40;
         }
 
         section.main .bio .main-btn {
@@ -315,26 +319,38 @@
                 padding: 5px 10px;
             }
 
-            section.main {
-                flex-direction: column;
-                text-align: center;
-                padding: 20px;
+                section.main {
+            flex-direction: column;
+            text-align: center;
             }
 
-            section.main .bio {
-                padding-right: 0;
-                margin-bottom: 20px;
-            }
+                section.main .bio {
+                    padding-right: 0;
+                    margin-bottom: 20px;
+                }
 
-            section.main .photo {
-                flex: 0 0 auto;
-                text-align: center;
-            }
+                section.main .photo {
+                    order: -1; /* Move photo to the top */
+                    margin-bottom: 20px;
+                    text-align: center;
+                    padding-top: 120px;
+                }
 
-            section.main .photo img {
-                max-width: 200px;
-            }
+                section.main .photo img {
+                    max-width: 200px;
+                }
 
+                section.main .bio h2 {
+                    font-size: 1.5rem;
+                }
+
+                section.main .bio h2 span {
+                    font-size: 1.2rem;
+                }
+
+                section.main .bio h2 small {
+                    font-size: 0.9rem;
+                }
             .cards .title {
                 font-size: 1.5rem;
             }
@@ -383,8 +399,9 @@
                 font-size: 0.7rem;
             }
 
-            section.main .bio {
-                padding-top: 80px;
+            section.main {
+                
+
             }
 
             section.main .bio h2 {
