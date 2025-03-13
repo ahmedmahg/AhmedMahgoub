@@ -55,6 +55,418 @@
             border-radius: 5px;
         }
 
+            /* Education Section */
+        section.education {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .education .title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .education .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .education .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .education .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .education .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .education .card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .education .card ul {
+            padding-left: 20px;
+        }
+
+        .education .card ul li {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* Mobile Styles for Education Section */
+        @media (max-width: 768px) {
+            .education .title {
+                font-size: 1.5rem;
+            }
+
+            .education .card h3 {
+                font-size: 1.2rem;
+            }
+
+            .education .card p {
+                font-size: 0.9rem;
+            }
+
+            .education .card ul li {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .education .title {
+                font-size: 1.2rem;
+            }
+
+            .education .card h3 {
+                font-size: 1rem;
+            }
+
+            .education .card p {
+                font-size: 0.8rem;
+            }
+
+            .education .card ul li {
+                font-size: 0.7rem;
+            }
+        }
+
+        /* CV Section */
+        section.cv {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cv .title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .cv .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .cv .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .cv .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .cv .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .cv .card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .cv .card .pdf-viewer {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* Mobile Styles for CV Section */
+        @media (max-width: 768px) {
+            .cv .title {
+                font-size: 1.5rem;
+            }
+
+            .cv .card h3 {
+                font-size: 1.2rem;
+            }
+
+            .cv .card p {
+                font-size: 0.9rem;
+            }
+
+            .cv .card .pdf-viewer {
+                height: 300px; /* Smaller height for mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cv .title {
+                font-size: 1.2rem;
+            }
+
+            .cv .card h3 {
+                font-size: 1rem;
+            }
+
+            .cv .card p {
+                font-size: 0.8rem;
+            }
+
+            .cv .card .pdf-viewer {
+                height: 200px; /* Even smaller height for small screens */
+            }
+        }
+
+
+                /* Experience Section */
+        section.experience {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .experience .title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .experience .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .experience .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .experience .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .experience .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .experience .card h4 {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .experience .card h4 span {
+            font-weight: normal;
+            color: #777;
+        }
+
+        .experience .card p.company-scale {
+            margin: 10px 0;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .experience .card ul {
+            padding-left: 20px;
+        }
+
+        .experience .card ul li {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .experience .card ul li a {
+            color: #1abc9c;
+            text-decoration: none;
+        }
+
+        .experience .card ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile Styles for Experience Section */
+        @media (max-width: 768px) {
+            .experience .title {
+                font-size: 1.5rem;
+            }
+
+            .experience .card h3 {
+                font-size: 1.2rem;
+            }
+
+            .experience .card h4 {
+                font-size: 0.9rem;
+            }
+
+            .experience .card p.company-scale {
+                font-size: 0.8rem;
+            }
+
+            .experience .card ul li {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .experience .title {
+                font-size: 1.2rem;
+            }
+
+            .experience .card h3 {
+                font-size: 1rem;
+            }
+
+            .experience .card h4 {
+                font-size: 0.8rem;
+            }
+
+            .experience .card p.company-scale {
+                font-size: 0.7rem;
+            }
+
+            .experience .card ul li {
+                font-size: 0.7rem;
+            }
+        }
+                /* Recommendations Section */
+            section.recommendations {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin: 50px 0;
+                padding: 20px;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .recommendations .title {
+                font-size: 2rem;
+                margin-bottom: 20px;
+                color: #2c3e50;
+            }
+
+            .recommendations .content {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 20px;
+                width: 90%;
+                max-width: 1200px;
+            }
+
+            .recommendations .card {
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                transition: 0.3s;
+            }
+
+            .recommendations .card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+
+            .recommendations .card h3 {
+                font-size: 1.5rem;
+                margin-bottom: 10px;
+                color: #2c3e50;
+            }
+
+            .recommendations .card p {
+                font-size: 1rem;
+                color: #555;
+                margin-bottom: 10px;
+            }
+
+            .recommendations .card .pdf-viewer {
+                width: 100%;
+                height: 500px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                margin-top: 10px;
+            }
+
+            /* Mobile Styles for Recommendations Section */
+            @media (max-width: 768px) {
+                .recommendations .title {
+                    font-size: 1.5rem;
+                }
+
+                .recommendations .card h3 {
+                    font-size: 1.2rem;
+                }
+
+                .recommendations .card p {
+                    font-size: 0.9rem;
+                }
+
+                .recommendations .card .pdf-viewer {
+                    height: 300px; /* Smaller height for mobile */
+                }
+            }
+
+            @media (max-width: 480px) {
+                .recommendations .title {
+                    font-size: 1.2rem;
+                }
+
+                .recommendations .card h3 {
+                    font-size: 1rem;
+                }
+
+                .recommendations .card p {
+                    font-size: 0.8rem;
+                }
+
+                .recommendations .card .pdf-viewer {
+                    height: 200px; /* Even smaller height for small screens */
+                }
+            }
+
                 /* Main Section */
         section.main {
             display: flex;
@@ -595,8 +1007,198 @@
         <div class="photo">
             <img src="images/PROF.png" alt="Ahmed Mahgoub">
         </div>
+        
+    </section>
+    <section class="education" id="education">
+        <h2 class="title">Education</h2>
+        <div class="content">
+            <div class="card">
+                <h3>2017 – 2022</h3>
+                <p><strong>Bachelor of Science</strong></p>
+                <p>Faculty of Engineering, Ain Shams University</p>
+                <p><strong>Major:</strong> Mechanical Power Engineering</p>
+                <a href="Education.html" class="main-btn">View My Academic courses</a>
+
+            </div>
+    
+            <div class="card">
+                <h3>2022 – 2023</h3>
+                <p><strong>Full Embedded System Diploma</strong></p>
+                <p>Under the supervision of Eng. Mohamed Abd El-Basset, Principal Embedded Software Engineer at Valeo</p>
+                <p><strong>Content Includes:</strong></p>
+                <ul>
+                    <li>Programming: C, Data Structures</li>
+                    <li>AVR MCU Peripherals: GPIO, ADC, Timers, Interrupts, EEPROM, ICU</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
+    <section class="experience" id="experience">
+        <h2 class="title">Professional Experience</h2>
+        <div class="content">
+            <!-- Elsewedy Electric -->
+            <div class="card">
+                <div class="job-header">
+                    <img src="images/SEI.png" alt="Elsewedy Electric Logo">
+                    <h3>Research and Development Engineer</h3>
+                </div>
+                <h4>Elsewedy Electric <span>(Feb 2025 – Present)</span></h4>
+                <p class="company-scale">
+                    📌 <strong>Scale:</strong> A multinational industrial company, operating in over 50 countries, 
+                    with manufacturing facilities in Egypt, Africa, and the Middle East. One of the largest 
+                    energy and infrastructure solution providers in the MENA region.
+                </p>
+                <ul>
+                    <li>Focused on the design, optimization, and validation of busway systems, ensuring compliance with industry standards.</li>
+                    <li>Developed new products, executed thermal and electrical simulations (FEA), and conducted material selection.</li>
+                    <li>Led compliance testing with IEC 61439, UL 857, NEC, and NEMA BU1.1 standards.</li>
+                    <li>Collaborated with labs and engineering teams to refine designs and perform critical testing.</li>
+                </ul>
+            </div>
+    
+            <!-- Carrier Midea -->
+            <div class="card">
+                <div class="job-header">
+                    <img src="images/Carrier.png" alt="Carrier Midea Logo">
+                    <h3>Research and Development Engineer</h3>
+                </div>
+                <h4>Carrier Midea, Egypt <span>(Jul 2024 – Present)</span></h4>
+                <p class="company-scale">
+                    📌 <strong>Scale:</strong> A leading global HVAC manufacturer, part of Midea Group, a Fortune 500 company. 
+                    Operates in Egypt as a joint venture between Carrier and Midea, focusing on air conditioning and refrigeration solutions.
+                </p>
+                <ul>
+                    <li>Designed AC refrigeration systems and simulated circuits.</li>
+                    <li>Collaborated with a Chinese team for project execution and technical support.</li>
+                    <li>Developed sourcing strategies and provided technical assistance using 2D and 3D modeling software.</li>
+                    <li><strong>Relevance:</strong> Applicable to thermal systems, HVAC, and product design.</li>
+                </ul>
+            </div>
+    
+            <!-- Armed Forces Projects -->
+            <div class="card">
+                <div class="job-header">
+                    <img src="images/MASR1.png" alt="Armed Forces Logo">
+                    <h3>Mechanical Design Engineer</h3>
+                </div>
+                <h4>Egypt's Future for Sustainable Development Agency- Egypt(Armed Forces Projects) <span>(Jun 2023 – Jun 2024)</span></h4>
+                <ul>
+                    <li>Managed design reviews and Bill of Quantities (BoQ) for military engineering projects.</li>
+                    <li><strong>Relevance:</strong> Project management, mechanical design, and systems engineering.</li>
+                </ul>
+            </div>
+    
+            <!-- Freelance Work -->
+            <div class="card">
+                <div class="job-header">
+                    <h3>Freelance Mechanical Design Engineer</h3>
+                </div>
+                <h4>Self-Employed <span>(Sep 2023 – Present)</span></h4>
+                <ul>
+                    <li>Provided mechanical design solutions for robotics and automation projects in Egypt and KSA.</li>
+                    <li>Worked on projects including the Humanoid Shams Robot, parking solutions, and MEP systems.</li>
+                    <li><strong>Relevance:</strong> Robotics, automation, and mechanical design.</li>
+                    <li><a href="#">View Projects</a></li>
+                </ul>
+            </div>
+    
+            <!-- Private Instructor -->
+            <div class="card">
+                <div class="job-header">
+                    <h3>Private Instructor</h3>
+                </div>
+                <h4>Self-Employed <span>(Jun 2022 – Jun 2023)</span></h4>
+                <ul>
+                    <li>Taught Stress Analysis, Theory of Machines, Electronics, and Engineering Physics to undergraduate students.</li>
+                    <li><strong>Relevance:</strong> Strong communication and teaching skills.</li>
+                    <li><a href="#">View Documentation</a></li>
+                </ul>
+            </div>
+    
+            <!-- Internships -->
+            <div class="card">
+                <div class="job-header">
+                    <h3>Internships</h3>
+                </div>
+                <h4>Shaker Consultancy Group <span>(Sep 2022 – Nov 2022)</span></h4>
+                <ul>
+                    <li>Assisted with firefighting, plumbing, and medical gases systems.</li>
+                    <li><strong>Relevance:</strong> Applicable to HVAC, fluid systems, and project management.</li>
+                </ul>
+    
+                <h4>Enppi (Engineering for the Petroleum & Process Industry) <span>(Aug 2022 – Sep 2022)</span></h4>
+                <ul>
+                    <li>Received technical training in static & rotating equipment, material selection, and project management.</li>
+                    <li><strong>Relevance:</strong> Applicable to material science, fluid mechanics, and project management.</li>
+                </ul>
+    
+                <h4>Proservice Company <span>(Sep 2021 – Oct 2021)</span></h4>
+                <ul>
+                    <li>Worked as an MEP site engineer.</li>
+                    <li><strong>Relevance:</strong> Applicable to HVAC, fluid systems, and site engineering.</li>
+                </ul>
+                <p><a href="#"> Certifications (Click)</a></p>
+            </div>
+    
+            <!-- Volunteer & Extracurricular Activities -->
+            <div class="card">
+                <div class="job-header">
+                    <h3>Volunteer & Extracurricular Activities</h3>
+                </div>
+                <ul>
+                    <li><strong>Resala Charity Organization:</strong> Organized donation drives, charity events, and fundraising activities.</li>
+                    <li><strong>Head, ASU Elite Student Activity:</strong> Led student initiatives and events.</li>
+                    <li><strong>Supply Chain Member, IDT:</strong> Contributed to logistics and operations planning.</li>
+                    <li><strong>Relevance:</strong> Demonstrates leadership, teamwork, and organizational skills.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="recommendations" id="recommendations">
+        <h2 class="title">Recommendations</h2>
+        <div class="content">
+                <!-- Recommendation 1 -->
+            <div class="card">
+                <h3>Recommendation from Professor Dr. Ashraf Ghorab</h3>
+                <p><strong>Head of Mechanical Power Department, Faculty of Engineering, Ain Shams University</strong></p>
+                <p>
+                    This letter highlights my experience with Eng. Ahmed Abd El Sattar Mahgoub during his undergraduate studies and his performance in the Turbomachinery course.
+                </p>
+                <!-- Embedded PDF from Google Drive -->
+                <iframe class="pdf-viewer" src="https://drive.google.com/file/d/10J5Tj6K3YzoEkpU-x0Xo3YywPegPveEd/preview" frameborder="0"></iframe>
+            </div>
+    
+                    <!-- Recommendation 2 -->
+            <div class="card">
+                <h3>Recommendation from Dr. Ahmed Eldein Hussin</h3>
+                <p><strong>Associate Professor, Mechanical Power Engineering</strong></p>
+                <p>
+                    This letter highlights my experience with Ahmed Abd El-Sattar during his undergraduate studies and his capstone project.
+                </p>
+                <!-- Embedded PDF from Google Drive -->
+                <iframe class="pdf-viewer" src="https://drive.google.com/file/d/1R4QDnTkkshpaIyKEpq90B0iRjdMZ4rmX/preview" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section class="cv" id="cv">
+        <h2 class="title">Curriculum Vitae (CV)</h2>
+        <div class="content">
+            <!-- CV Card -->
+            <div class="card">
+                <h3>Ahmed Mahgoub</h3>
+                <p><strong>Research and Development Engineer</strong></p>
+                <p>
+                    This document provides a comprehensive overview of my academic background, professional experience, technical skills, and projects.
+                </p>
+                <!-- Embedded PDF from Google Drive -->
+                <iframe class="pdf-viewer" src="https://drive.google.com/file/d/1DBw1Rd5A0D9Inzpmsw4L8z6SCORzqd6R/preview" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
+    
     <section class="software-skills" id="software-skills">
         <h2 class="title">Software Skills</h2>
         <div class="content">
