@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>Education</title>
+    <title>Ahmed Mahgoub</title>
     <style>
         /* General Styles */
         body {
@@ -14,37 +14,39 @@
             padding: 0;
             box-sizing: border-box;
             line-height: 1.6;
+            background-color: #f9f9f9;
+            color: #333;
         }
 
+        /* Header Styles */
         header {
+            width: 100%;
+            background-color: #0d3160;
+            padding: 15px 30px;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            padding: 15px;
-            background-color: #2c3e50;
-            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
         }
 
         header .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 10px;
             color: white;
+            font-size: 24px;
+            font-weight: bold;
             text-decoration: none;
         }
-
-        header .navigation {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
+        header .navigation  {
+           padding-right: 50px;
         }
 
         header .navigation a {
-            text-decoration: none;
             color: white;
-            font-size: 0.9rem;
-            padding: 5px 10px;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 18px;
             transition: 0.3s;
         }
 
@@ -53,66 +55,230 @@
             border-radius: 5px;
         }
 
+            /* Education Section */
         section.education {
-            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+            padding: 80px 20px 20px; /* Added padding-top: 80px */
+            max-width: 1200px;
+            margin: 0 auto;
+
         }
 
-        .education-entry {
+        .education .title {
+            font-size: 2rem;
             margin-bottom: 20px;
-        }
-
-        .education-entry h3 {
-            margin: 0;
-            font-size: 1.2rem;
             color: #2c3e50;
         }
 
-        .education-entry p {
-            margin: 5px 0;
+        .education .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
         }
 
-        .education-entry ul {
-            padding-left: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        table th, table td {
-            padding: 10px;
-            border: 1px solid #ddd;
-            text-align: left;
-        }
-
-        footer {
-            text-align: center;
+        .education .card {
+            background: white;
             padding: 20px;
-            background-color: #2c3e50;
-            color: white;
-            border-top: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
         }
 
-        footer .footer-title {
-            font-size: 16px;
+        .education .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .education .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .education .card p {
+            font-size: 1rem;
+            color: #555;
             margin-bottom: 10px;
         }
 
-        footer .social-icons a {
-            margin: 0 10px;
-            color: white;
-            font-size: 1.2rem;
-            text-decoration: none;
+        .education .card ul {
+            padding-left: 20px;
         }
 
-        footer .social-icons a:hover {
-            color: #1abc9c;
+        .education .card ul li {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #555;
         }
 
-          /* Recommendations Section */
-          section.recommendations {
+                /* Table Styling */
+        .education .card table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        .education .card table th,
+        .education .card table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .education .card table th {
+            background-color: #f9f9f9;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .education .card table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* Mobile Styles for Education Section */
+        @media (max-width: 768px) {
+            .education .title {
+                padding: 40px 20px 20px; /* Added padding-top: 80px */
+
+                font-size: 1.5rem;
+            }
+
+            .education .card h3 {
+                font-size: 1.2rem;
+            }
+
+            .education .card p {
+                font-size: 0.9rem;
+            }
+
+            .education .card ul li {
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .education .title {
+                font-size: 1.2rem;
+            }
+
+            .education .card h3 {
+                font-size: 1rem;
+            }
+
+            .education .card p {
+                font-size: 0.8rem;
+            }
+
+            .education .card ul li {
+                font-size: 0.7rem;
+            }
+        }
+
+        /* CV Section */
+        section.cv {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .cv .title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .cv .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .cv .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .cv .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .cv .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .cv .card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .cv .card .pdf-viewer {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* Mobile Styles for CV Section */
+        @media (max-width: 768px) {
+            .cv .title {
+                font-size: 1.5rem;
+            }
+
+            .cv .card h3 {
+                font-size: 1.2rem;
+            }
+
+            .cv .card p {
+                font-size: 0.9rem;
+            }
+
+            .cv .card .pdf-viewer {
+                height: 300px; /* Smaller height for mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cv .title {
+                font-size: 1.2rem;
+            }
+
+            .cv .card h3 {
+                font-size: 1rem;
+            }
+
+            .cv .card p {
+                font-size: 0.8rem;
+            }
+
+            .cv .card .pdf-viewer {
+                height: 200px; /* Even smaller height for small screens */
+            }
+        }
+
+
+                /* Recommendations Section */
+            section.recommendations {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -206,34 +372,245 @@
                 }
             }
 
+
+
+        /* Contact Section */
+        section.contact {
+            background-color: #0d3160;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        section.contact .title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        section.contact .content {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        section.contact .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        section.contact .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        section.contact .card .icon {
+            font-size: 2rem;
+            color: #1abc9c;
+            margin-bottom: 10px;
+        }
+
+        section.contact .card .info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        section.contact .card .info p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #0d3160;
+            color: white;
+            border-top: 1px solid #ddd;
+        }
+
+        footer .footer-title {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        footer .social-icons a:hover {
+            background-color: #0d3160;
+
+        }
+         /* Add this style for the software skills section */
+         .software-skills {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+        }
+
+        .software-skills .title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .software-skills .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .software-skills .skill {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .software-skills .skill:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .software-skills .skill .icon {
+            font-size: 2rem;
+            color: #1abc9c;
+            margin-bottom: 10px;
+        }
+
+        .software-skills .skill .info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .software-skills .skill .info p {
+            font-size: 1rem;
+            color: #555;
+        }
+
         /* Mobile Styles */
         @media (max-width: 768px) {
+            .software-skills .title {
+                font-size: 1.5rem;
+            }
+
+            .software-skills .content {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+            }
+
+            .software-skills .skill {
+                padding: 15px;
+            }
+
+            .software-skills .skill .icon {
+                font-size: 1.5rem;
+            }
+
+            .software-skills .skill .info h3 {
+                font-size: 1rem;
+            }
+
+            .software-skills .skill .info p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .software-skills .title {
+                font-size: 1.2rem;
+            }
+
+            .software-skills .content {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                gap: 10px;
+            }
+
+            .software-skills .skill {
+                padding: 10px;
+            }
+
+            .software-skills .skill .icon {
+                font-size: 1.2rem;
+            }
+
+            .software-skills .skill .info h3 {
+                font-size: 0.9rem;
+            }
+
+            .software-skills .skill .info p {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            header .logo {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
             header .navigation {
                 flex-direction: column;
                 align-items: center;
             }
 
             header .navigation a {
-                font-size: 0.8rem;
+                font-size: 14px;
+                padding: 5px 10px;
             }
 
-            section.education {
-                padding: 10px;
+               
+            .cards .title {
+                font-size: 1.5rem;
             }
 
-            .education-entry h3 {
-                font-size: 1rem;
+            .cards .card .info h3 {
+                font-size: 1.2rem;
             }
 
-            .education-entry p {
+            .cards .card .info p {
                 font-size: 0.9rem;
             }
 
-            table th, table td {
-                padding: 8px;
+            .cards .card .info ul li {
                 font-size: 0.8rem;
             }
 
+            section.contact .title {
+                font-size: 1.5rem;
+            }
+
+            section.contact .card .info h3 {
+                font-size: 1.2rem;
+            }
+
+            section.contact .card .info p {
+                font-size: 0.9rem;
+            }
+            section.contact .card .h2 {
+                color: #ddd;
+            }
             footer .footer-title {
                 font-size: 0.9rem;
             }
@@ -252,17 +629,18 @@
                 font-size: 0.7rem;
             }
 
-            .education-entry h3 {
-                font-size: 0.9rem;
+            
+
+            section.contact .title {
+                font-size: 1.2rem;
             }
 
-            .education-entry p {
+            section.contact .card .info h3 {
+                font-size: 1rem;
+            }
+
+            section.contact .card .info p {
                 font-size: 0.8rem;
-            }
-
-            table th, table td {
-                padding: 6px;
-                font-size: 0.7rem;
             }
 
             footer .footer-title {
@@ -288,90 +666,97 @@
             <a href="https://drive.google.com/file/d/1E4JanQKxIjb_mItyvtQLrDDr_1j8tVIf/view?usp=sharing">My CV</a>
         </nav>
     </header>
+     
+    </section>
+    <section class="education" id="education">
+        <h2 class="title">Education</h2>
+        <div class="content">
+            <div class="card">
+                <h3>2017 – 2022</h3>
+                <p><strong>Bachelor of Science</strong></p>
+                <p>Faculty of Engineering, Ain Shams University</p>
+                <p><strong>Major:</strong> Mechanical Power Engineering</p>
+                <p>Ain Shams University's Engineering & Technology programs are ranked =267 globally in the QS World University Rankings 2025, reflecting the institution's strong academic and research reputation.</p>
 
-    <section class="education">
-        <br>
-        <br>
-        <h2>Education</h2>
-        
-        <div class="education-entry">
-            <h3>2017 – 2022</h3>
-            <p><strong>Bachelor of Science</strong></p>
-            <p>Faculty of Engineering, Ain Shams University</p>
-            <p><strong>Major:</strong> Mechanical Power Engineering</p>
-        </div>
+            </div>
     
-        <div class="education-entry">
-            <h3>2022 – 2023</h3>
-            <p><strong>Full Embedded System Diploma</strong></p>
-            <p>Under the supervision of Eng. Mohamed Abd El-Basset, Principal Embedded Software Engineer at Valeo</p>
-            <p><strong>Content Includes:</strong></p>
-            <ul>
-                <li>Programming: C, Data Structures</li>
-                <li>AVR MCU Peripherals: GPIO, ADC, Timers, Interrupts, EEPROM, ICU</li>
-            </ul>
+            <div class="card">
+                <h3>2022 – 2023</h3>
+                <p><strong>Full Embedded System Diploma</strong></p>
+                <p>Under the supervision of Eng. Mohamed Abd El-Basset, Principal Embedded Software Engineer at Valeo</p>
+                <p><strong>Content Includes:</strong></p>
+                <ul>
+                    <li>Programming: C, Data Structures</li>
+                    <li>AVR MCU Peripherals: GPIO, ADC, Timers, Interrupts, EEPROM, ICU</li>
+                </ul>
+            </div>
         </div>
     </section>
     
-    <section id="education" class="education">
-        <h2>Education</h2>
+    <section class="education" id="education-table">
+        <h2 class="title">Coursework</h2>
+        <div class="content">
+            <div class="card">
+                <h3>Course Details</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Course Code</th>
+                            <th>Course Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Spring 2022 -->
+                        <tr><td rowspan="6">Spring 2022</td><td>MEP499</td><td>Graduation Project (Design and Manufacturing Micro Gas Turbine (Jet Engine))</td></tr>
+                        <tr><td>HUMx41</td><td>Legislation & Contracts</td></tr>
+                        <tr><td>MEP471</td><td>Refrigeration & Air Conditioning</td></tr>
+                        <tr><td>MEP431</td><td>Turbomachinery (2)</td></tr>
+                        <tr><td>MEP482</td><td>Modeling & Simulation of Thermal Power</td></tr>
+                        <tr><td>MEP481</td><td>Automatic Control (2)</td></tr>
     
-        <table>
-            <thead>
-                <tr>
-                    <th>Year</th>
-                    <th>Course Code</th>
-                    <th>Course Name</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Spring 2022 -->
-                <tr><td rowspan="6">Spring 2022</td><td>MEP499</td><td>Graduation Project (Design and Manufacturing Micro Gas Turbine (Jet Engine))</td></tr>
-                <tr><td>HUMx41</td><td>Legislation & Contracts</td></tr>
-                <tr><td>MEP471</td><td>Refrigeration & Air Conditioning</td></tr>
-                <tr><td>MEP431</td><td>Turbomachinery (2)</td></tr>
-                <tr><td>MEP482</td><td>Modeling & Simulation of Thermal Power</td></tr>
-                <tr><td>MEP481</td><td>Automatic Control (2)</td></tr>
+                        <!-- Spring 2021 -->
+                        <tr><td rowspan="9">Spring 2021</td><td>HUMx21</td><td>Management & Marketing</td></tr>
+                        <tr><td>MDP354</td><td>Mechanics of Machines (2)</td></tr>
+                        <tr><td>MDP355</td><td>Introduction to Mechatronics</td></tr>
+                        <tr><td>MEP331</td><td>Turbomachinery (1)</td></tr>
+                        <tr><td>MEP351</td><td>Thermal Power Plants</td></tr>
+                        <tr><td>MEP352</td><td>Renewable Energy</td></tr>
+                        <tr><td>MEP361</td><td>Combustion</td></tr>
+                        <tr><td>MEP362</td><td>Internal Combustion Engines (1)</td></tr>
+                        <tr><td>MEP381</td><td>Automatic Control (1)</td></tr>
     
-                <!-- Spring 2021 -->
-                <tr><td rowspan="9">Spring 2021</td><td>HUMx21</td><td>Management & Marketing</td></tr>
-                <tr><td>MDP354</td><td>Mechanics of Machines (2)</td></tr>
-                <tr><td>MDP355</td><td>Introduction to Mechatronics</td></tr>
-                <tr><td>MEP331</td><td>Turbomachinery (1)</td></tr>
-                <tr><td>MEP351</td><td>Thermal Power Plants</td></tr>
-                <tr><td>MEP352</td><td>Renewable Energy</td></tr>
-                <tr><td>MEP361</td><td>Combustion</td></tr>
-                <tr><td>MEP362</td><td>Internal Combustion Engines (1)</td></tr>
-                <tr><td>MEP381</td><td>Automatic Control (1)</td></tr>
+                        <!-- Spring 2020 -->
+                        <tr><td rowspan="6">Spring 2020</td><td>HUMx31</td><td>Engineering Economy</td></tr>
+                        <tr><td>MDP211</td><td>Manufacturing Technology (2)</td></tr>
+                        <tr><td>MDP251</td><td>Mechanics of Machines</td></tr>
+                        <tr><td>MEP212</td><td>Thermodynamics (2)</td></tr>
+                        <tr><td>MEP221</td><td>Heat & Mass Transfer</td></tr>
+                        <tr><td>MEP231</td><td>Fluid Dynamics</td></tr>
     
-                <!-- Spring 2020 -->
-                <tr><td rowspan="6">Spring 2020</td><td>HUMx31</td><td>Engineering Economy</td></tr>
-                <tr><td>MDP211</td><td>Manufacturing Technology (2)</td></tr>
-                <tr><td>MDP251</td><td>Mechanics of Machines</td></tr>
-                <tr><td>MEP212</td><td>Thermodynamics (2)</td></tr>
-                <tr><td>MEP221</td><td>Heat & Mass Transfer</td></tr>
-                <tr><td>MEP231</td><td>Fluid Dynamics</td></tr>
+                        <!-- Spring 2019 -->
+                        <tr><td rowspan="6">Spring 2019</td><td>CES112</td><td>Theory of Structures</td></tr>
+                        <tr><td>EPM112</td><td>Electrical & Electronic Engineering</td></tr>
+                        <tr><td>HUMx12</td><td>Technical Report Writing</td></tr>
+                        <tr><td>MDP111</td><td>Manufacturing Technology</td></tr>
+                        <tr><td>MDP131</td><td>Materials Engineering & Testing</td></tr>
+                        <tr><td>MDP161</td><td>Machine Drawing</td></tr>
     
-                <!-- Spring 2019 -->
-                <tr><td rowspan="6">Spring 2019</td><td>CES112</td><td>Theory of Structures</td></tr>
-                <tr><td>EPM112</td><td>Electrical & Electronic Engineering</td></tr>
-                <tr><td>HUMx12</td><td>Technical Report Writing</td></tr>
-                <tr><td>MDP111</td><td>Manufacturing Technology</td></tr>
-                <tr><td>MDP131</td><td>Materials Engineering & Testing</td></tr>
-                <tr><td>MDP161</td><td>Machine Drawing</td></tr>
-    
-                <!-- Spring 2018 -->
-                <tr><td rowspan="7">Spring 2018</td><td>CSE011</td><td>Computer Technology</td></tr>
-                <tr><td>HUM099</td><td>Human Rights</td></tr>
-                <tr><td>HUMx11</td><td>Technical English Language</td></tr>
-                <tr><td>MDP021</td><td>Engineering Drawing & Projection</td></tr>
-                <tr><td>MDP022</td><td>Production & Engineering History</td></tr>
-                <tr><td>PHM011</td><td>Mathematics (1)</td></tr>
-                <tr><td>PHM021</td><td>Physics (1)</td></tr>
-            </tbody>
-        </table>
+                        <!-- Spring 2018 -->
+                        <tr><td rowspan="7">Spring 2018</td><td>CSE011</td><td>Computer Technology</td></tr>
+                        <tr><td>HUM099</td><td>Human Rights</td></tr>
+                        <tr><td>HUMx11</td><td>Technical English Language</td></tr>
+                        <tr><td>MDP021</td><td>Engineering Drawing & Projection</td></tr>
+                        <tr><td>MDP022</td><td>Production & Engineering History</td></tr>
+                        <tr><td>PHM011</td><td>Mathematics (1)</td></tr>
+                        <tr><td>PHM021</td><td>Physics (1)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </section>
 
+   
     <section class="recommendations" id="recommendations">
         <h2 class="title">Recommendations</h2>
         <div class="content">
@@ -398,7 +783,117 @@
             </div>
         </div>
     </section>
+
+    <section class="cv" id="cv">
+        <h2 class="title">Curriculum Vitae (CV)</h2>
+        <div class="content">
+            <!-- CV Card -->
+            <div class="card">
+                <h3>Ahmed Mahgoub</h3>
+                <p><strong>Research and Development Engineer</strong></p>
+                <p>
+                    This document provides a comprehensive overview of my academic background, professional experience, technical skills, and projects.
+                </p>
+                <!-- Embedded PDF from Google Drive -->
+                <iframe class="pdf-viewer" src="https://drive.google.com/file/d/10_jqEaPZI7hYjOLxOMLs4-kzvPXud7rS/preview" frameborder="0"></iframe>
+            </div>
+        </div>
+    </section>
     
+    <section class="software-skills" id="software-skills">
+        <h2 class="title">Software Skills</h2>
+        <div class="content">
+            <div class="skill">
+                <div class="icon">
+                    <i class="fas fa-file-word"></i>
+                </div>
+                <div class="info">
+                    <h3>Microsoft Office</h3>
+                    <p>Word, Excel, PowerPoint</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="icon">
+                    <i class="fas fa-cube"></i>
+                </div>
+                <div class="info">
+                    <h3>SolidWorks</h3>
+                    <p>Modeling, Assembly, Stress Analysis, Thermal Analysis</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="info">
+                    <h3>Ansys</h3>
+                    <p>Fluent, Thermal, Mechanical</p>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <div class="info">
+                    <h3>Matlab / Simulink</h3>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="icon">
+                    <i class="fas fa-drafting-compass"></i>
+                </div>
+                <div class="info">
+                    <h3>Inventor</h3>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="icon">
+                    <i class="fas fa-drafting-compass"></i>
+                </div>
+                <div class="info">
+                    <h3>AutoCAD</h3>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <div class="info">
+                    <h3>Proteus</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+    <section class="cards contact" id="contact">
+        <h2 class="title">Let's work together</h2>
+        <div class="content">
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="info">
+                    <h3>Phone</h3>
+                    <p>+20 1025227651</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info">
+                    <h3>Email</h3>
+                    <p>ahmed.mahgoubu@gmail.com</p>
+                    <a href="mailto:ahmed.mahgoubu@gmail.com"><i class="far fa-envelope"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <p class="footer-title">Copyrights @ <span>Ahmed Mahgoub</span></p>
         <div class="social-icons">
