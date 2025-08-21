@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Ahmed Mahgoub</title>
     <style>
-        /* General Styles */
+        /* General Styles with Verdana Font */
         body {
-            font-family: Arial, sans-serif;
+            font-family: Verdana, Geneva, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -37,6 +37,7 @@
             font-size: 24px;
             font-weight: bold;
             text-decoration: none;
+            font-family: Verdana, Geneva, sans-serif;
         }
         header .navigation  {
            padding-right: 50px;
@@ -48,6 +49,7 @@
             padding: 10px 15px;
             font-size: 18px;
             transition: 0.3s;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         header .navigation a:hover {
@@ -55,7 +57,7 @@
             border-radius: 5px;
         }
 
-            /* Education Section */
+        /* Education Section */
         section.education {
             display: flex;
             flex-direction: column;
@@ -70,6 +72,7 @@
             font-size: 2rem;
             margin-bottom: 20px;
             color: #2c3e50;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .education .content {
@@ -86,6 +89,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: 0.3s;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .education .card:hover {
@@ -97,12 +101,14 @@
             font-size: 1.5rem;
             margin-bottom: 10px;
             color: #2c3e50;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .education .card p {
             font-size: 1rem;
             color: #555;
             margin-bottom: 10px;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .education .card ul {
@@ -113,6 +119,7 @@
             margin-bottom: 10px;
             font-size: 0.9rem;
             color: #555;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         /* Mobile Styles for Education Section */
@@ -167,6 +174,7 @@
             font-size: 2rem;
             margin-bottom: 20px;
             color: #2c3e50;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .cv .content {
@@ -183,6 +191,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: 0.3s;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .cv .card:hover {
@@ -194,12 +203,14 @@
             font-size: 1.5rem;
             margin-bottom: 10px;
             color: #2c3e50;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .cv .card p {
             font-size: 1rem;
             color: #555;
             margin-bottom: 10px;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .cv .card .pdf-viewer {
@@ -247,8 +258,7 @@
             }
         }
 
-
-                /* Experience Section */
+        /* Experience Section */
         section.experience {
             display: flex;
             flex-direction: column;
@@ -263,6 +273,7 @@
             font-size: 2rem;
             margin-bottom: 20px;
             color: #2c3e50;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .experience .content {
@@ -279,6 +290,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: 0.3s;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .experience .card:hover {
@@ -290,12 +302,14 @@
             font-size: 1.5rem;
             margin-bottom: 10px;
             color: #2c3e50;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .experience .card h4 {
             font-size: 1rem;
             color: #555;
             margin-bottom: 10px;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .experience .card h4 span {
@@ -307,6 +321,7 @@
             margin: 10px 0;
             font-size: 0.9rem;
             color: #333;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .experience .card ul {
@@ -317,6 +332,7 @@
             margin-bottom: 10px;
             font-size: 0.9rem;
             color: #333;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .experience .card ul li a {
@@ -372,102 +388,107 @@
                 font-size: 0.7rem;
             }
         }
-                /* Recommendations Section */
-            section.recommendations {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                margin: 50px 0;
-                padding: 20px;
-                max-width: 1200px;
-                margin: 0 auto;
-            }
+        
+        /* Recommendations Section */
+        section.recommendations {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px 0;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
+        .recommendations .title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #2c3e50;
+            font-family: Verdana, Geneva, sans-serif;
+        }
+
+        .recommendations .content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .recommendations .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            font-family: Verdana, Geneva, sans-serif;
+        }
+
+        .recommendations .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .recommendations .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            font-family: Verdana, Geneva, sans-serif;
+        }
+
+        .recommendations .card p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 10px;
+            font-family: Verdana, Geneva, sans-serif;
+        }
+
+        .recommendations .card .pdf-viewer {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        /* Mobile Styles for Recommendations Section */
+        @media (max-width: 768px) {
             .recommendations .title {
-                font-size: 2rem;
-                margin-bottom: 20px;
-                color: #2c3e50;
-            }
-
-            .recommendations .content {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 20px;
-                width: 90%;
-                max-width: 1200px;
-            }
-
-            .recommendations .card {
-                background: white;
-                padding: 20px;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                transition: 0.3s;
-            }
-
-            .recommendations .card:hover {
-                transform: translateY(-10px);
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                font-size: 1.5rem;
             }
 
             .recommendations .card h3 {
-                font-size: 1.5rem;
-                margin-bottom: 10px;
-                color: #2c3e50;
+                font-size: 1.2rem;
             }
 
             .recommendations .card p {
-                font-size: 1rem;
-                color: #555;
-                margin-bottom: 10px;
+                font-size: 0.9rem;
             }
 
             .recommendations .card .pdf-viewer {
-                width: 100%;
-                height: 500px;
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                margin-top: 10px;
+                height: 300px; /* Smaller height for mobile */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .recommendations .title {
+                font-size: 1.2rem;
             }
 
-            /* Mobile Styles for Recommendations Section */
-            @media (max-width: 768px) {
-                .recommendations .title {
-                    font-size: 1.5rem;
-                }
-
-                .recommendations .card h3 {
-                    font-size: 1.2rem;
-                }
-
-                .recommendations .card p {
-                    font-size: 0.9rem;
-                }
-
-                .recommendations .card .pdf-viewer {
-                    height: 300px; /* Smaller height for mobile */
-                }
+            .recommendations .card h3 {
+                font-size: 1rem;
             }
 
-            @media (max-width: 480px) {
-                .recommendations .title {
-                    font-size: 1.2rem;
-                }
-
-                .recommendations .card h3 {
-                    font-size: 1rem;
-                }
-
-                .recommendations .card p {
-                    font-size: 0.8rem;
-                }
-
-                .recommendations .card .pdf-viewer {
-                    height: 200px; /* Even smaller height for small screens */
-                }
+            .recommendations .card p {
+                font-size: 0.8rem;
             }
 
-                /* Main Section */
+            .recommendations .card .pdf-viewer {
+                height: 200px; /* Even smaller height for small screens */
+            }
+        }
+
+        /* Main Section */
         section.main {
             display: flex;
             align-items: center;
@@ -480,19 +501,18 @@
         section.main .bio {
             flex: 1;
             padding-right: 40px;
-            
         }
 
         section.main .bio h2 {
             font-size: 2rem;
             margin-bottom: 10px;
-            
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         section.main .bio h2 span {
             font-size: 1.5rem;
             color: #1abc9c;
-
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         section.main .bio h2 small {
@@ -501,6 +521,7 @@
             display: block;
             margin-top: 10px;
             padding-top: 40;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         section.main .bio .main-btn {
@@ -512,6 +533,7 @@
             text-decoration: none;
             border-radius: 5px;
             transition: 0.3s;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         section.main .bio .main-btn:hover {
@@ -557,6 +579,7 @@
             font-size: 2rem;
             margin-bottom: 20px;
             color: #2c3e50;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .cards .content {
@@ -573,6 +596,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: 0.3s;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .cards .card:hover {
@@ -590,12 +614,14 @@
             font-size: 1.5rem;
             margin-bottom: 10px;
             color: #2c3e50;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .cards .card .info p {
             font-size: 1rem;
             color: #555;
             margin-bottom: 10px;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .cards .card .info ul {
@@ -606,6 +632,7 @@
             margin-bottom: 10px;
             font-size: 0.9rem;
             color: #555;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .cards .card .project-media img,
@@ -626,6 +653,7 @@
             text-decoration: none;
             border-radius: 5px;
             transition: 0.3s;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .cards .card .more-details:hover {
@@ -643,6 +671,7 @@
         section.contact .title {
             font-size: 2rem;
             margin-bottom: 20px;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         section.contact .content {
@@ -658,6 +687,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: 0.3s;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         section.contact .card:hover {
@@ -675,12 +705,14 @@
             font-size: 1.5rem;
             margin-bottom: 10px;
             color: #2c3e50;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         section.contact .card .info p {
             font-size: 1rem;
             color: #555;
             margin-bottom: 10px;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         /* Footer */
@@ -695,6 +727,7 @@
         footer .footer-title {
             font-size: 1rem;
             margin-bottom: 10px;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         footer .social-icons a {
@@ -706,10 +739,10 @@
 
         footer .social-icons a:hover {
             background-color: #0d3160;
-
         }
-         /* Add this style for the software skills section */
-         .software-skills {
+        
+        /* Software skills section */
+        .software-skills {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -720,6 +753,7 @@
             font-size: 2rem;
             margin-bottom: 20px;
             color: #2c3e50;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .software-skills .content {
@@ -737,6 +771,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: 0.3s;
             text-align: center;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .software-skills .skill:hover {
@@ -754,11 +789,13 @@
             font-size: 1.2rem;
             margin-bottom: 10px;
             color: #2c3e50;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         .software-skills .skill .info p {
             font-size: 1rem;
             color: #555;
+            font-family: Verdana, Geneva, sans-serif;
         }
 
         /* Mobile Styles */
@@ -838,38 +875,39 @@
                 padding: 5px 10px;
             }
 
-                section.main {
-            flex-direction: column;
-            text-align: center;
+            section.main {
+                flex-direction: column;
+                text-align: center;
             }
 
-                section.main .bio {
-                    padding-right: 0;
-                    margin-bottom: 20px;
-                }
+            section.main .bio {
+                padding-right: 0;
+                margin-bottom: 20px;
+            }
 
-                section.main .photo {
-                    order: -1; /* Move photo to the top */
-                    margin-bottom: 20px;
-                    text-align: center;
-                    padding-top: 120px;
-                }
+            section.main .photo {
+                order: -1; /* Move photo to the top */
+                margin-bottom: 20px;
+                text-align: center;
+                padding-top: 120px;
+            }
 
-                section.main .photo img {
-                    max-width: 200px;
-                }
+            section.main .photo img {
+                max-width: 200px;
+            }
 
-                section.main .bio h2 {
-                    font-size: 1.5rem;
-                }
+            section.main .bio h2 {
+                font-size: 1.5rem;
+            }
 
-                section.main .bio h2 span {
-                    font-size: 1.2rem;
-                }
+            section.main .bio h2 span {
+                font-size: 1.2rem;
+            }
 
-                section.main .bio h2 small {
-                    font-size: 0.9rem;
-                }
+            section.main .bio h2 small {
+                font-size: 0.9rem;
+            }
+            
             .cards .title {
                 font-size: 1.5rem;
             }
@@ -897,9 +935,11 @@
             section.contact .card .info p {
                 font-size: 0.9rem;
             }
+            
             section.contact .card .h2 {
                 color: #ddd;
             }
+            
             footer .footer-title {
                 font-size: 0.9rem;
             }
@@ -916,11 +956,6 @@
 
             header .navigation a {
                 font-size: 0.7rem;
-            }
-
-            section.main {
-                
-
             }
 
             section.main .bio h2 {
@@ -983,20 +1018,28 @@
             <a href="experience.html">Professional Experience</a>
             <a href="Projects.html">Projects</a>
             <a href="contact.html">Contact</a>
-            <a href="https://drive.google.com/file/d/10_jqEaPZI7hYjOLxOMLs4-kzvPXud7rS/preview">My CV</a>
+            <a href="https://drive.google.com/file/d/1E4JanQKxIjb_mItyvtQLrDDr_1j8tVIf/view?usp=sharing">My CV</a>
         </nav>
     </header>
 
     <section class="main">
         <div class="bio">
-            <h2>Hello, I'm Ahmed<br><span>Research And Development Engineer</span><br>
-                <small>
-                   I am a Research and Development Engineer with expertise in mechanical design, thermal systems, and product development. Currently, I work at <strong>Elsewedy Electric</strong>, a global leader in energy and infrastructure solutions, where I optimize busway systems, conduct compliance testing, and select materials for high-performance applications. Additionally, I contribute to <strong>Carrier Midea Egypt</strong> as an <strong>R&D Engineer</strong>, designing AC refrigeration systems, simulating circuits, and aligning projects with schedules. I also develop sourcing strategies and provide technical support using 2D and 3D modeling software for design and simulation.
-        <br><br>
-        With a strong background in <strong>programming</strong> and <strong>Finite Element Analysis (FEA)</strong>, I leverage these skills to enhance system performance and solve complex engineering challenges. Previously, I played a key role in military engineering projects as a <strong>Mechanical Design Engineer</strong>, managing design reviews and ensuring successful project execution. My freelance experience includes robotics and automation projects, such as the <strong>Humanoid Shams Robot</strong>, smart parking systems, and MEP systems in Egypt and Saudi Arabia. I also have a passion for teaching and have worked as a private instructor, offering courses in stress analysis, mechanics, and electronics.
-        <br><br>
-        My expertise spans <strong>R&D, simulation, and design</strong>, making me a versatile professional in product innovation, compliance testing, and engineering solutions. I thrive on solving complex problems and delivering results that drive progress in the field.
-                </small>
+            <h2>Hello, I'm Ahmed<br><span>Mechanical Design Engineer </span><br>
+                
+
+            <small>
+                I am a Mechanical Design Engineer at <strong>Elsewedy Electric</strong>, specializing in power transformer design and thermal analysis. My work focuses on optimizing thermal performance, ensuring structural integrity, and enhancing product reliability for energy infrastructure solutions.
+
+                <br><br>
+                Previously, I contributed to <strong>Carrier Midea Egypt</strong> as an <strong>R&D Engineer</strong>, designing AC refrigeration systems, simulating circuits, and aligning projects with schedules. I also developed sourcing strategies and provided technical support using 2D and 3D modeling software for design and simulation.
+
+                <br><br>
+                With a strong background in <strong>programming</strong> and <strong>Finite Element Analysis (FEA)</strong>, I leverage these skills to enhance system performance and solve complex engineering challenges. My experience includes military engineering projects, robotics and automation (e.g., the <strong>Humanoid Shams Robot</strong>), smart parking systems, and MEP systems in Egypt and Saudi Arabia. I also have a passion for teaching and have worked as a private instructor, offering courses in stress analysis, mechanics, and electronics.
+
+                <br><br>
+                My expertise spans <strong>R&D, simulation, and design</strong>, making me a versatile professional in product innovation, compliance testing, and engineering solutions. I thrive on solving complex problems and delivering results that drive progress in the field.
+            </small>
+
             </h2>
             <a href="Projects.html" class="main-btn">View my work</a>
             <div class="social-icons">
@@ -1017,7 +1060,6 @@
                 <p><strong>Bachelor of Science</strong></p>
                 <p>Faculty of Engineering, Ain Shams University</p>
                 <p><strong>Major:</strong> Mechanical Power Engineering</p>
-                <p>Ain Shams University's Engineering & Technology programs are ranked =267 globally in the QS World University Rankings 2025, reflecting the institution's strong academic and research reputation.</p>
                 <a href="Education.html" class="main-btn">View My Academic courses</a>
 
             </div>
@@ -1195,7 +1237,7 @@
                     This document provides a comprehensive overview of my academic background, professional experience, technical skills, and projects.
                 </p>
                 <!-- Embedded PDF from Google Drive -->
-                <iframe class="pdf-viewer" src="https://drive.google.com/file/d/10_jqEaPZI7hYjOLxOMLs4-kzvPXud7rS/preview" frameborder="0"></iframe>
+                <iframe class="pdf-viewer" src="https://drive.google.com/file/d/1DBw1Rd5A0D9Inzpmsw4L8z6SCORzqd6R/preview" frameborder="0"></iframe>
             </div>
         </div>
     </section>
