@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Mahgoub - CV & Certifications</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+.profile-img {
+    width: 160px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;   /* ✅ This clips the image inside the circle */
+    border: 3px solid #e0e0e0;
+    margin: 0 auto 20px;
+    background-color: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* ✅ Keeps proportions while filling */
+}
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .contact-info i {
+            color: #ff9800;
+        }
+        
+        .content-section {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+        
+        h2 {
+            color: #1a237e;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h2 i {
+            color: #3949ab;
+        }
+        
+        .pdf-viewer-container {
+            margin: 20px 0;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pdf-viewer {
+            width: 100%;
+            height: 600px;
+            border: none;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: #3949ab;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: #283593;
+        }
+        
+        .download-btn i {
+            margin-right: 8px;
+        }
+        
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .cert-card {
+            background: #f5f7ff;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 4px solid #3949ab;
+            transition: transform 0.3s;
+        }
+        
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cert-title {
+            font-weight: bold;
+            color: #1a237e;
+            margin-bottom: 10px;
+        }
+        
+        .cert-org {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .cert-date {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            color: #666;
+            border-top: 1px solid #e0e0e0;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+            
+            .pdf-viewer {
+                height: 400px;
+            }
+            
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .pdf-viewer {
+                height: 300px;
+            }
+        }
+        
+   
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f6f9;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a237e 0%, #283593 100%);
+            color: white;
+            padding-bottom: 40px;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        /* Navigation bar */
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 8px 8px;
+        }
+
+        .navigation .logo {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .navigation .nav-links a {
+            margin-left: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navigation .nav-links a:hover {
+            color: #ff9800;
+        }
+
+        /* Profile block */
+        .profile-block {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .profile-img {
+            width: 130px;
+            height: 160px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #e0e0e0;
+            margin: 0 auto 20px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile-block h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+
+        .profile-block .title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .contact-info i {
+            margin-right: 8px;
+            color: #ffcc80;
+        }
+   
+    </style>
+</head>
+<body>
+<header>
+    <!-- Navigation bar -->
+    <nav class="navigation">
+        <a href="index.html" class="logo">Ahmed Mahgoub</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="Education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="Projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="CV & Certifications.html" target="_blank">CV & Certifications </a>
+        </div>
+    </nav>
+
+    <!-- Profile block -->
+    <div class="profile-block">
+        <div class="profile-img">
+            <img src="images/ER.png" alt="Ahmed Mahgoub">
+        </div>
+        <h1>Ahmed Mahgoub</h1>
+        <div class="title">Mechanical Engineer</div>
+        <div class="contact-info">
+            <div><i class="fas fa-graduation-cap"></i> B.Sc. Mechanical Engineering, Ain Shams University</div>
+            <div><i class="fas fa-map-marker-alt"></i> Cairo, Egypt</div>
+            <div><i class="fas fa-envelope"></i> ahmed.mahgoubu@gmail.com</div>
+            <div><i class="fas fa-phone"></i> +02 1025227651</div>
+        </div>
+    </div>
+</header>
+
+    <div class="container">
+        <section class="content-section">
+            <h2><i class="fas fa-file-pdf"></i> Curriculum Vitae</h2>
+            <p>View my complete CV below or download it for your records.</p>
+            
+            <div class="pdf-viewer-container">
+                <iframe class="pdf-viewer" src="https://drive.google.com/file/d/1AC1I9hOBb7Rz0tvB7FcMicFizY6miXjI/preview" frameborder="0"></iframe>
+            </div>
+            
+            <a href=" https://drive.google.com/file/d/FILE_ID/preview" class="download-btn" target="_blank">
+                <i class="fas fa-download"></i> Download CV
+            </a>
+        </section>
+
+
+<section class="content-section">
+            <h2><i class="fas fa-certificate"></i> Certifications</h2>
+            <p>Below are my professional certifications and qualifications:</p>
+            
+            
+            <div class="pdf-viewer-container" style="margin-top: 30px;">
+                <iframe class="pdf-viewer" src="https://drive.google.com/file/d/1Z3BzykJZaYSdJAMe8O4UVnaLQMEL89hu/preview"  frameborder="0"></iframe>
+            </div>
+            
+            
+            <a href="https://drive.google.com/file/d/1Z3BzykJZaYSdJAMe8O4UVnaLQMEL89hu/previewe" class="download-btn" target="_blank">
+                <i class="fas fa-download"></i> Download Certifications
+            </a>
+        </section>
+
+    </div>
+    
+
+    <footer>
+        <p>© 2023 Ahmed Abd El Sattar Mahgoub. All rights reserved.</p>
+        <p>Last updated: September 2023</p>
+    </footer>
+</body>
+</html>
