@@ -226,6 +226,61 @@
                 font-size: 0.9rem;
             }
         }
+
+        /* LinkedIn-style job entry */
+        .job-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+
+        .company-logo {
+            width: 56px;
+            height: 56px;
+            object-fit: contain;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 4px;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .company-logo-placeholder {
+            width: 56px;
+            height: 56px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            background: #f0f4f8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            color: #0d3160;
+            flex-shrink: 0;
+        }
+
+        .job-title-block h3 {
+            margin: 0 0 2px 0;
+        }
+
+        .job-title-block h4 {
+            margin: 0 0 2px 0;
+        }
+
+        .job-meta {
+            font-size: 0.82rem;
+            color: #888;
+            margin: 0;
+        }
+
+        .job a {
+            color: #0d3160;
+            text-decoration: none;
+        }
+        .job a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -242,109 +297,144 @@
         </nav>
     </header>
 
-    <section id="experience" class="experience">
+            <section id="experience" class="experience">
         <h2>Professional Experience</h2>
-    
+
+        <!-- KAIST -->
+        <div class="job">
+            <div class="job-header">
+                <img src="images/KAIST_logo.png" alt="KAIST" class="company-logo">
+                <div class="job-title-block">
+                    <h3>Graduate Research Assistant</h3>
+                    <h4>Korea Advanced Institute of Science and Technology (KAIST) &middot; Full-time</h4>
+                    <p class="job-meta">Mar 2026 &ndash; Present &middot; 4 mos &middot; Daejeon, South Korea &middot; On-site</p>
+                </div>
+            </div>
+            <p>Working at IESEL Lab under Prof. Daejun Chang, on energy systems research spanning solar thermal systems, thermal energy storage, and process-level optimization. Current projects include a PVT&ndash;TES co-simulation framework (Python&nbsp;+ HYSYS&nbsp;+ MATLAB), a CO&#8322; liquefaction facility design, and a closed-loop blanket gas system for industrial hot TES tanks.</p>
+            <p>Lab: <a href="https://iesel.kaist.ac.kr/home" target="_blank">https://iesel.kaist.ac.kr/home</a></p>
+        </div>
+
         <!-- Elsewedy Electric -->
         <div class="job">
-            <h3>Mechanical Design Engineer</h3>
-            <h4>Elsewedy Electric – Egypt <span>(Feb 2025 – Present)</span></h4>
-            <p class="company-scale">
-                📌 <strong>Division:</strong> Power Transformer R&D Division of Elsewedy Electric, a multinational
-                industrial leader in energy and infrastructure solutions across MENA and Africa.
-            </p>
+            <div class="job-header">
+                <img src="images/SEI.png" alt="Elsewedy Electric" class="company-logo">
+                <div class="job-title-block">
+                    <h3>Research and Development Engineer</h3>
+                    <h4>ELSEWEDY ELECTRIC &middot; Full-time</h4>
+                    <p class="job-meta">Feb 2025 &ndash; Apr 2026 &middot; 1 yr 3 mos &middot; 10th of Ramadan, Egypt &middot; Hybrid</p>
+                </div>
+            </div>
+            <p>R&amp;D work on power transformers in the Power Transformer Division &mdash; covering design validation, production support, and simulation-driven reliability improvement.</p>
             <ul>
-                <li>Specialized in transformer tank design and analysis within the R&D division.</li>
-                <li>Developed detailed 3D models using <strong>SolidWorks</strong> and <strong>AutoCAD</strong>.</li>
-                <li>Performed structural and thermal simulations using <strong>ANSYS</strong> to validate performance.</li>
-                <li>Prepared technical documentation, tender packages, and engineering reports.</li>
-                <li>Collaborated with cross-functional teams to ensure compliance, manufacturability, and reliability.</li>
+                <li><strong>Manufacturing Support:</strong> Produced and maintained engineering drawings; resolved production issues and drove design improvements for better manufacturability.</li>
+                <li><strong>Simulation &amp; Analysis:</strong> Ran thermal, dielectric, and structural FEA simulations to validate transformer performance against international standards.</li>
+                <li><strong>Material Evaluation:</strong> Assessed cores, windings, insulation, and tank materials for magnetic performance, thermal stability, and mechanical integrity.</li>
             </ul>
         </div>
-    
+
         <!-- Carrier Midea -->
         <div class="job">
-            <h3>Research and Development Engineer</h3>
-            <h4>Carrier Midea, Egypt <span>(Jul 2024 – Present)</span></h4>
-            <p class="company-scale">
-                📌 <strong>Scale:</strong> A leading global HVAC manufacturer, part of Midea Group, a Fortune 500 company. 
-                Operates in Egypt as a joint venture between Carrier and Midea, focusing on air conditioning and refrigeration solutions.
-            </p>
+            <div class="job-header">
+                <img src="images/Carrier.png" alt="Carrier Midea" class="company-logo">
+                <div class="job-title-block">
+                    <h3>R&amp;D Design Engineer</h3>
+                    <h4>Midea Carrier &middot; Full-time</h4>
+                    <p class="job-meta">Mar 2024 &ndash; Feb 2025 &middot; 1 yr &middot; Al Jizah, Egypt &middot; On-site</p>
+                </div>
+            </div>
             <ul>
-                <li>Designed AC refrigeration systems and simulated circuits.</li>
-                <li>Collaborated with a Chinese team for project execution and technical support.</li>
-                <li>Developed sourcing strategies and provided technical assistance using 2D and 3D modeling software.</li>
-                <li><strong>Relevance:</strong> Applicable to thermal systems, HVAC, and product design.</li>
+                <li>Designed AC refrigeration system circuits and ran system-level simulations.</li>
+                <li>Coordinated with the China-based engineering team on product development timelines and technical standards.</li>
+                <li>Developed component sourcing strategies and provided 2D/3D design support across the product lifecycle.</li>
             </ul>
         </div>
-    
-        <!-- Armed Forces Projects -->
+
+        <!-- Armed Forces / EAF -->
         <div class="job">
-            <h3>Mechanical Design Engineer</h3>
-            <h4>Confidential (Armed Forces Projects) <span>(Jun 2023 – Jun 2024)</span></h4>
-            <ul>
-                <li>Managed design reviews and Bill of Quantities (BoQ) for military engineering projects.</li>
-                <li><strong>Relevance:</strong> Project management, mechanical design, and systems engineering.</li>
-            </ul>
+            <div class="job-header">
+                <img src="images/MASR1.png" alt="Egyptian Air Force" class="company-logo">
+                <div class="job-title-block">
+                    <h3>Mechanical Engineer &mdash; Owner Representative (Military Service)</h3>
+                    <h4>Egyptian Air Force (EAF) &middot; Full-time</h4>
+                    <p class="job-meta">Apr 2023 &ndash; Jul 2024 &middot; 1 yr 4 mos &middot; Egypt &middot; On-site</p>
+                </div>
+            </div>
+            <p>Military service period as an Owner Representative, reviewing designs and BOQs for projects owned by the Armed Forces: gas stations, structural trusses, and administrative buildings.</p>
         </div>
-    
-        <!-- Freelance Work -->
-        <div class="job">
-            <h3>Freelance Mechanical Design Engineer</h3>
-            <h4>Self-Employed <span>(Sep 2023 – Present)</span></h4>
-            <ul>
-                <li>Provided mechanical design solutions for robotics and automation projects in Egypt and KSA.</li>
-                <li>Worked on projects including the Humanoid Shams Robot, parking solutions, and MEP systems.</li>
-                <li><strong>Relevance:</strong> Robotics, automation, and mechanical design.</li>
-                <li><a href="#">View Projects</a></li>
-            </ul>
-        </div>
-    
+
         <!-- Private Instructor -->
         <div class="job">
-            <h3>Private Instructor</h3>
-            <h4>Self-Employed <span>(Jun 2022 – Jun 2023)</span></h4>
+            <div class="job-header">
+                <div class="company-logo-placeholder"><i class="fas fa-chalkboard-teacher"></i></div>
+                <div class="job-title-block">
+                    <h3>Private Instructor for Undergraduate Engineers</h3>
+                    <h4>Self-Employed &middot; Part-time</h4>
+                    <p class="job-meta">Apr 2022 &ndash; Feb 2025 &middot; 2 yrs 11 mos &middot; Cairo, Egypt &middot; Hybrid</p>
+                </div>
+            </div>
+            <p>Taught Stress Analysis, Theory of Machines, Electronics, and Engineering Physics to undergraduate engineering students.</p>
+        </div>
+
+        <!-- Freelance / Humanoid Robot -->
+        <div class="job">
+            <div class="job-header">
+                <div class="company-logo-placeholder"><i class="fas fa-robot"></i></div>
+                <div class="job-title-block">
+                    <h3>Mechanical Design Engineer</h3>
+                    <h4>Freelance</h4>
+                    <p class="job-meta">Nov 2020 &ndash; Apr 2022 &middot; 1 yr 6 mos &middot; Cairo, Egypt</p>
+                </div>
+            </div>
+            <p>Humanoid Robot &mdash; Freelance project to design and manufacture a nursing robot for Ain Shams Specialist Hospital. Built from scratch using a mix of conventional manufacturing and 3D-printed parts; now under implementation at the hospital.</p>
             <ul>
-                <li>Taught Stress Analysis, Theory of Machines, Electronics, and Engineering Physics to undergraduate students.</li>
-                <li><strong>Relevance:</strong> Strong communication and teaching skills.</li>
-                <li><a href="#">View Documentation</a></li>
+                <li>Mechanical design and 3D modeling in SolidWorks.</li>
+                <li>Motor sizing and speed reduction calculations.</li>
+                <li>Hands-on manufacturing and assembly of most structural components.</li>
             </ul>
         </div>
 
         <!-- Internships -->
         <div class="job">
-            <h2>Internships</h2>
-            <h3>Shaker Consultancy Group</h3>
-            <h4><span>(Sep 2022 – Nov 2022)</span></h4>
+            <div class="job-header">
+                <div class="company-logo-placeholder"><i class="fas fa-briefcase"></i></div>
+                <div class="job-title-block">
+                    <h3>Internships</h3>
+                </div>
+            </div>
+
+            <h4 style="margin-top:14px;">Shaker Consultancy Group <span style="font-weight:normal; color:#777;">(Sep 2022 &ndash; Nov 2022)</span></h4>
             <ul>
-                <li>Assisted with firefighting, plumbing, and medical gases systems.</li>
-                <li><strong>Relevance:</strong> Applicable to HVAC, fluid systems, and project management.</li>
+                <li>Assisted in design and coordination of firefighting, plumbing, and medical gas systems.</li>
             </ul>
 
-            <h3>Enppi (Engineering for the Petroleum & Process Industry)</h3>
-            <h4><span>(Aug 2022 – Sep 2022)</span></h4>
+            <h4>ENPPI &mdash; Engineering for the Petroleum &amp; Process Industry <span style="font-weight:normal; color:#777;">(Aug 2022 &ndash; Sep 2022)</span></h4>
             <ul>
-                <li>Received technical training in static & rotating equipment, material selection, and project management.</li>
-                <li><strong>Relevance:</strong> Applicable to material science, fluid mechanics, and project management.</li>
+                <li>Technical training covering static equipment (boilers, pressure vessels, tanks), rotating equipment (compressors, pumps), piping design, material selection, and project management fundamentals.</li>
             </ul>
 
-            <h3>Proservice Company</h3>
-            <h4><span>(Sep 2021 – Oct 2021)</span></h4>
+            <h4>The Electric Power Research Institute (EPRI) <span style="font-weight:normal; color:#777;">(Aug 2022 &middot; 1 mo &middot; Cairo, Egypt)</span></h4>
             <ul>
-                <li>Worked as an MEP site engineer.</li>
-                <li><strong>Relevance:</strong> Applicable to HVAC, fluid systems, and site engineering.</li>
+                <li>Attended training in power systems and mechanical engineering fundamentals.</li>
             </ul>
-            <p><a href="#"> Certifications (Click)</a></p>
+
+            <h4>ProService &mdash; The Engineering Company for Project Services <span style="font-weight:normal; color:#777;">(Sep 2021 &ndash; Oct 2021 &middot; 6th of October, Al Jizah)</span></h4>
+            <ul>
+                <li>Site mechanical engineer on the West Mark commercial mall project &mdash; responsible for HVAC installation including air ducts, chilled water pipes, chillers, AHUs, and fan coil units.</li>
+            </ul>
         </div>
 
-        <!-- Volunteer & Extracurricular Activities -->
+        <!-- Volunteer -->
         <div class="job">
-            <h2>Volunteer & Extracurricular Activities</h2>
+            <div class="job-header">
+                <div class="company-logo-placeholder"><i class="fas fa-hands-helping"></i></div>
+                <div class="job-title-block">
+                    <h3>Volunteer &amp; Extracurricular Activities</h3>
+                </div>
+            </div>
             <ul>
-                <li><strong>Resala Charity Organization:</strong> Organized donation drives, charity events, and fundraising activities.</li>
-                <li><strong>Head, ASU Elite Student Activity:</strong> Led student initiatives and events.</li>
-                <li><strong>Supply Chain Member, IDT:</strong> Contributed to logistics and operations planning.</li>
-                <li><strong>Relevance:</strong> Demonstrates leadership, teamwork, and organizational skills.</li>
+                <li><strong>Resala Charity Organization:</strong> Organized donation drives, charity events, and fundraising campaigns.</li>
+                <li><strong>Head, ASU Elite Student Activity:</strong> Led student initiatives and events at Ain Shams University.</li>
+                <li><strong>Supply Chain Member, IDT:</strong> Supported logistics and operations planning.</li>
             </ul>
         </div>
     </section>

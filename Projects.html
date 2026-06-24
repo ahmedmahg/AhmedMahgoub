@@ -314,6 +314,12 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <h2 style="color:white; text-align:center;">Projects</h2>
+        <p style="color:#1abc9c; font-size:13px; padding:5px 15px; margin:0; font-weight:bold;">&#127981; KAIST Research</p>
+        <a href="#pvt-tes"><i class="fas fa-solar-panel"></i> PVT + TES Co-Simulation</a>
+        <a href="#co2-liq"><i class="fas fa-industry"></i> CO&#8322; Liquefaction Plant</a>
+        <a href="#csp-solar"><i class="fas fa-sun"></i> CSP Solar Tower Study</a>
+        <a href="#blanket-gas"><i class="fas fa-fire"></i> TES Blanket Gas System</a>
+        <p style="color:#1abc9c; font-size:13px; padding:5px 15px; margin:10px 0 0 0; font-weight:bold;">&#128295; Earlier Projects</p>
         <a href="#jet-engine"><i class="fas fa-rocket"></i> Micro Jet Engine</a>
         <a href="#hev"><i class="fas fa-car"></i> Hybrid Electric Vehicle</a>
         <a href="#humanoid"><i class="fas fa-robot"></i> Humanoid Robot</a>
@@ -326,6 +332,127 @@
    <!-- Main Content -->
 <div class="content">
     
+    <!-- ============================
+         KAIST RESEARCH PROJECTS
+         ============================ -->
+
+    <!-- PVT + TES Co-Simulation -->
+    <div id="pvt-tes" class="container">
+        <h1>Solar PVT &amp; Stratified TES Co-Simulation Digital Twin</h1>
+        <p class="funding">&#127979; KAIST &mdash; ME 50039: Design of Energy Plants &nbsp;|&nbsp; Supervisor: Prof. Daejun Chang</p>
+        <h2>Abstract</h2>
+        <p>
+            A dual-location co-simulation framework was developed for a <strong>Solar Photovoltaic-Thermal (PVT) collector array</strong> integrated with a <strong>Stratified Thermal Energy Storage (TES) tank</strong>. The system was simulated for two climates: <strong>Daejeon, Korea</strong> (district heating) and <strong>Cairo, Egypt</strong> (absorption cooling). The stack couples Python 3.11, Aspen HYSYS V14 (via COM/pywin32), and MATLAB (Klein FDM TES model) into a unified digital twin.
+        </p>
+        <h2>System Specifications</h2>
+        <ul>
+            <li><strong>PVT Array:</strong> 200 m² aperture area</li>
+            <li><strong>TES Tank:</strong> 15 m³ (H = 4.24 m, D = 2.12 m), stratified, 10-node FDM model</li>
+            <li><strong>HTF:</strong> Water/Ethylene Glycol 70/30 at ~6,480 kg/h</li>
+            <li><strong>Temperature Range:</strong> Hot supply ~100&deg;C, cold return ~55&deg;C</li>
+            <li><strong>Heat Exchanger:</strong> Shell-and-tube, UA = 2,148 kJ/h&middot;&deg;C</li>
+            <li><strong>Charge / Discharge Flow:</strong> 500 kg/h / 800 kg/h</li>
+        </ul>
+        <h2>Key Contributions</h2>
+        <ul>
+            <li>Developed a 5-rule supervisory controller (charge gate, SOC limits, demand-aware discharge, thermocline lockout, flow modulation).</li>
+            <li>Resolved HYSYS COM bugs: ADJ-1 convergence, E-100 temperature cross, Q_FLOOR phantom heat at night.</li>
+            <li>Updated Klein TES model with step-profile initialization, k_factor = 0.05, and a dedicated zero-flow night handler.</li>
+            <li>Integrated live weather data via Open-Meteo API into a Python Tkinter PVT dashboard with KPI cards and hover tooltips.</li>
+            <li>Produced full engineering deliverables: P&amp;ID (ISA 5.1), HAZID worksheet (41 entries), LOPA safety analysis, and 18-page concept design report.</li>
+        </ul>
+        <h2>Tools &amp; Software</h2>
+        <ul>
+            <li>Python 3.11 (pywin32 COM, CoolProp, Open-Meteo API, Tkinter GUI)</li>
+            <li>Aspen HYSYS V14 (steady-state + dynamic simulation)</li>
+            <li>MATLAB &mdash; Klein Finite Difference Method (FDM) TES model</li>
+            <li>AutoCAD Plant 3D (P&amp;ID generation, ISA 5.1 compliance)</li>
+        </ul>
+    </div>
+
+    <!-- CO2 Liquefaction Plant -->
+    <div id="co2-liq" class="container">
+        <h1>CO&#8322; Liquefaction Pilot Plant &mdash; 3 TPD Facility Design</h1>
+        <p class="funding">&#127979; KAIST &mdash; GIGAette Co. Ltd. Collaboration &nbsp;|&nbsp; Project C25004</p>
+        <h2>Abstract</h2>
+        <p>
+            End-to-end concept and basic engineering design of a <strong>3 Tonne Per Day (TPD) CO&#8322; liquefaction facility</strong> for IAE Daejeon. The process flow covers compression, multi-stage heat exchange, JT expansion, and liquid CO&#8322; storage in an integrated cryogenic skid layout.
+        </p>
+        <h2>Process Flow</h2>
+        <ul>
+            <li>V-101 (feed) &rarr; C-101 (6 &rarr; 44 barg) &rarr; E-201 (pre-cool) &rarr; E-301/302/303 (cryogenic HX train) &rarr; E-601 (sub-cool) &rarr; JT-402 &parallel; N-401 (expansion) &rarr; V-501 (LCO&#8322; storage)</li>
+        </ul>
+        <h2>Key Deliverables</h2>
+        <ul>
+            <li>Site layout optimization: L-shape footprint (~200 m²), Hyundai Engineering color-standard layering.</li>
+            <li>Python/COM AutoCAD Plant 3D automation scripts with 25-layer professional setup.</li>
+            <li>Interactive React Three.js 3D plant viewer: animated flow particles, SCADA overlay, clickable equipment popup cards, color-coded piping per fluid stream.</li>
+            <li>LN&#8322; cold storage extension (C26005): 5-tank IsoTES-Silo train, DN400, 0.2 m³/tank, ethanol TESM (&minus;80&deg;C to +20&deg;C).</li>
+            <li>Python flow assurance tool (Tkinter GUI + CoolProp): Darcy-Weisbach &Delta;P, liquid level analysis, ethanol viscosity profiling.</li>
+        </ul>
+        <h2>Tools &amp; Software</h2>
+        <ul>
+            <li>Aspen HYSYS V14 &mdash; process simulation &amp; heat/material balance</li>
+            <li>AutoCAD Plant 3D &mdash; layout &amp; P&amp;ID (Python COM automation)</li>
+            <li>React + Three.js &mdash; interactive 3D plant viewer</li>
+            <li>Python + CoolProp &mdash; flow assurance &amp; fluid properties</li>
+        </ul>
+    </div>
+
+    <!-- CSP Solar Tower -->
+    <div id="csp-solar" class="container">
+        <h1>CSP Solar Tower Comparative Study &mdash; Egypt, Saudi Arabia &amp; UAE</h1>
+        <p class="funding">&#127979; KAIST &mdash; Independent Research &nbsp;|&nbsp; Novel Literature Gap Study</p>
+        <h2>Abstract</h2>
+        <p>
+            A <strong>Python-based CSP solar tower comparison simulation</strong> across three Gulf &amp; MENA countries (Egypt, Saudi Arabia, UAE), modeling performance variation due to solar resource, ambient conditions, and TES dispatch strategies. Identified as a novel gap in existing CSP literature.
+        </p>
+        <h2>Methodology</h2>
+        <ul>
+            <li>Solar resource data retrieved via <strong>NASA POWER API</strong> for each location.</li>
+            <li>TES modeled using <strong>Klein FDM</strong> — hourly charge/discharge profiles per country climate.</li>
+            <li>Performance metrics compared: annual energy yield, capacity factor, LCOE sensitivity, and TES utilization.</li>
+        </ul>
+        <h2>Key Findings (Preliminary)</h2>
+        <ul>
+            <li>Saudi Arabia and UAE show consistently higher DNI vs. Egypt Delta region, impacting TES cycle depth.</li>
+            <li>Klein FDM captures thermocline degradation differences across ambient temperature profiles.</li>
+            <li>Study positions as a candidate for journal submission (Solar Energy / Applied Energy).</li>
+        </ul>
+        <h2>Tools</h2>
+        <ul>
+            <li>Python 3.11 (NASA POWER API, pandas, matplotlib)</li>
+            <li>MATLAB &mdash; Klein FDM TES model</li>
+        </ul>
+    </div>
+
+    <!-- TES Blanket Gas System -->
+    <div id="blanket-gas" class="container">
+        <h1>Concept Design &mdash; Closed-Loop Blanket Gas System for Hot TES Tank</h1>
+        <p class="funding">&#127979; KAIST + GIGAette Co. Ltd. &nbsp;|&nbsp; Project T26007 &nbsp;|&nbsp; Started: June 2026</p>
+        <h2>Abstract</h2>
+        <p>
+            Concept engineering design of a <strong>closed-loop N&#8322; blanket gas system</strong> for a Hot Thermal Energy Storage (HTES) tank using thermal oil (TESM) at up to <strong>340&deg;C</strong>, operating at <strong>35&ndash;36 rapid cycles/day</strong> (30 min charge / 10 min discharge). The system targets a vapor space pressure of <strong>0.05&ndash;0.15 barg</strong>.
+        </p>
+        <h2>System Components</h2>
+        <ul>
+            <li><strong>Liebig Condenser:</strong> Vapor separation from thermal oil off-gas before returning to the gas bag.</li>
+            <li><strong>Elastic Gas Bag:</strong> Closed-loop N&#8322; storage to absorb vapor space volume fluctuations during rapid thermal cycling.</li>
+            <li><strong>Valve System:</strong> PCV (pressure control), PSV (safety relief), VRV (vacuum relief) — fully instrumented per ISA 5.1.</li>
+        </ul>
+        <h2>Key Design Calculations</h2>
+        <ul>
+            <li>Gas bag volume sizing based on HTES tank vapor space and liquid level swing over 35+ cycles/day.</li>
+            <li>Thermal oil vapor pressure profiling at 340&deg;C for PCV/PSV set-point definition.</li>
+            <li>Condenser duty estimation for vapor condensation load at peak cycling rate.</li>
+        </ul>
+        <h2>Status</h2>
+        <p>&#9989; Active &mdash; Concept design phase, in collaboration with GIGAette Co. Ltd. and KAIST IESEL.</p>
+    </div>
+
+    <hr style="border: 2px solid #0d3160; margin: 30px 0;">
+    <h2 style="text-align:center; color:#0d3160; margin-bottom:20px;">&#128295; Earlier Projects</h2>
+
     <!-- Micro Jet Engine Section -->
     <div id="jet-engine" class="container">
         <h1>Micro Jet Engine Design and Analysis</h1>
