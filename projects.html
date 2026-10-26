@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects | Ahmed Mahgoub</title>
+<meta name="description" content="Project details: CO2 liquefaction plant, blanket gas system, solar PVT with thermal storage, CSP comparison, micro gas turbine, nursing robot and more.">
+<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="css/site.css">
+<style>
+.page-head{padding:104px 0 8px}
+.page-head h1{margin:0;font-size:34px;color:#1c2733}
+.page-head p{margin:6px 0 0;color:var(--muted);max-width:66ch}
+
+.layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:32px;align-items:start;padding:28px 0 64px}
+.side{position:sticky;top:84px;background:var(--card);border-radius:var(--radius);box-shadow:0 2px 8px rgba(0,0,0,.08);padding:14px 0}
+.side h2{font-size:13px;color:var(--muted);font-weight:600;margin:10px 18px 4px}
+.side h2:first-child{margin-top:0}
+.side a{display:flex;gap:10px;align-items:center;padding:7px 18px;color:#2c3440;text-decoration:none;font-size:14.5px;line-height:1.35;border-left:3px solid transparent}
+.side a i{width:16px;text-align:center;color:var(--navy);font-size:13px}
+.side a:hover{background:var(--navy-soft)}
+.side a.on{border-left-color:var(--navy);background:var(--navy-soft);color:var(--navy);font-weight:600}
+
+.project{background:var(--card);border-radius:var(--radius);box-shadow:0 2px 8px rgba(0,0,0,.08);padding:30px 34px;margin-bottom:26px;scroll-margin-top:84px}
+.project .top{display:flex;gap:16px;align-items:flex-start}
+.project .icon{flex:none;width:50px;height:50px;border-radius:10px;background:var(--navy-soft);color:var(--navy);display:grid;place-items:center;font-size:21px}
+.project h2{margin:0;font-size:24px;line-height:1.3;color:#1c2733}
+.project .tag{margin:4px 0 0;color:var(--muted);font-size:14.5px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin:22px 0 6px}
+.facts div{background:#fbfcfd;padding:12px 14px}
+.facts dt{font-size:12.5px;color:var(--muted);margin:0}
+.facts dd{margin:2px 0 0;font-size:15.5px;font-weight:600;color:#1c2733}
+.project h3{font-size:17px;color:var(--navy);margin:24px 0 8px}
+.project p{margin:0 0 10px;color:#333;max-width:72ch}
+.project ul{margin:0 0 10px;padding-left:20px;color:#333;max-width:72ch}
+.project li{margin-bottom:6px}
+.project ul ul{margin-top:6px}
+.project .media{margin:20px 0 6px;border-radius:8px;overflow:hidden;background:#f1f3f5}
+.project .media img,.project .media video{display:block;width:100%;height:auto}
+.project .media figcaption{font-size:13px;color:var(--muted);padding:8px 12px;background:#fff}
+.project .tools{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0;padding:0;list-style:none}
+.project .tools li{font-size:13px;background:#f1f3f5;color:#3b4148;padding:4px 10px;border-radius:20px;margin:0}
+.project .files{margin-top:20px;display:flex;gap:10px;flex-wrap:wrap}
+.note{font-size:13.5px;color:var(--muted);border-left:3px solid var(--line);padding:2px 0 2px 12px;margin:18px 0 0}
+.divider{display:flex;align-items:center;gap:14px;margin:44px 0 22px;color:var(--navy)}
+.divider h2{margin:0;font-size:21px}
+.divider::after{content:"";flex:1;height:1px;background:#cfd6df}
+.jump{display:none}
+
+@media (max-width:960px){
+  .layout{grid-template-columns:minmax(0,1fr);padding-top:16px}
+  .side{display:none}
+  .jump{display:block;margin:12px 0 0}
+  .jump select{width:100%;padding:11px 12px;border:1px solid #cfd6df;border-radius:8px;font:inherit;background:#fff;color:#1c2733}
+  .project{padding:22px 18px}
+  .project h2{font-size:20px}
+  .page-head{padding-top:92px}
+  .page-head h1{font-size:28px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="index.html" class="logo"><img src="images/logo.svg" alt="">Ahmed Mahgoub</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><i class="fas fa-bars"></i></button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="cv.html">CV &amp; Certifications</a>
+      <a href="guide/index.html">Study Abroad Guide</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="page-head">
+    <h1>Projects</h1>
+    <p>Research and industry design work at KAIST, followed by earlier projects from Egypt. Client names, project codes and exact operating data are left out where the work is under agreement.</p>
+    <label class="jump"><span class="sr" style="position:absolute;left:-9999px">Jump to a project</span>
+      <select id="jump" aria-label="Jump to a project">
+        <option value="">Jump to a project…</option>
+        <option value="co2">CO₂ liquefaction pilot plant</option>
+        <option value="blanket">Blanket gas system</option>
+        <option value="pvt">Solar PVT with thermal storage</option>
+        <option value="csp">CSP solar tower comparison</option>
+        <option value="turbine">Micro gas turbine</option>
+        <option value="robot">Humanoid nursing robot</option>
+        <option value="hev">Hybrid electric vehicle model</option>
+        <option value="desert">Desert reclamation systems</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="layout">
+    <nav class="side" aria-label="Projects">
+      <h2>KAIST</h2>
+      <a href="#co2"><i class="fas fa-industry"></i><span>CO<sub>2</sub> liquefaction plant</span></a>
+      <a href="#blanket"><i class="fas fa-fire"></i>Blanket gas system</a>
+      <a href="#pvt"><i class="fas fa-solar-panel"></i>Solar PVT and storage</a>
+      <a href="#csp"><i class="fas fa-sun"></i>CSP tower comparison</a>
+      <h2>Earlier projects</h2>
+      <a href="#turbine"><i class="fas fa-cogs"></i>Micro gas turbine</a>
+      <a href="#robot"><i class="fas fa-robot"></i>Humanoid nursing robot</a>
+      <a href="#hev"><i class="fas fa-car"></i>Hybrid electric vehicle</a>
+      <a href="#desert"><i class="fas fa-seedling"></i>Desert reclamation</a>
+    </nav>
+
+    <div>
+      <!-- ================= KAIST ================= -->
+      <article class="project" id="co2">
+        <div class="top">
+          <div class="icon"><i class="fas fa-industry"></i></div>
+          <div>
+            <h2>CO<sub>2</sub> Liquefaction Pilot Plant</h2>
+            <p class="tag">Industrial research project, KAIST · 2026</p>
+          </div>
+        </div>
+        <dl class="facts">
+          <div><dt>Capacity</dt><dd>3 t/day</dd></div>
+          <div><dt>Plot area</dt><dd>~200 m²</dd></div>
+          <div><dt>Stage</dt><dd>Concept and basic engineering</dd></div>
+          <div><dt>My role</dt><dd>Process model and layout</dd></div>
+        </dl>
+
+        <h3>Overview</h3>
+        <p>Concept and basic engineering for a pilot facility that captures CO<sub>2</sub> and stores it as a liquid. The process covers feed buffering, compression, pre-cooling, a cryogenic heat-exchanger train, subcooling, Joule-Thomson expansion and liquid storage, all arranged as a compact skid layout.</p>
+
+        <h3>What I did</h3>
+        <ul>
+          <li>Built the process model and the heat and material balance in Aspen HYSYS.</li>
+          <li>Laid out the plant in an L-shaped plot of about 200 m², balancing piping runs, maintenance access and safety distances.</li>
+          <li>Wrote Python scripts that drive AutoCAD Plant 3D through COM to set up the drawing standard and generate the layout, so changes to the design flow through to the drawings.</li>
+          <li>Built a Python flow assurance tool (CoolProp) for pressure drop, liquid level and fluid property checks.</li>
+          <li>Built an interactive 3D plant viewer in the browser with animated flows and clickable equipment cards, used to walk the client through the design.</li>
+          <li>Extended the design with a liquid nitrogen cold storage module that uses ethanol as the storage medium.</li>
+        </ul>
+
+        <h3>Tools</h3>
+        <ul class="tools"><li>Aspen HYSYS</li><li>AutoCAD Plant 3D</li><li>Python</li><li>CoolProp</li><li>React, Three.js</li></ul>
+      </article>
+
+      <article class="project" id="blanket">
+        <div class="top">
+          <div class="icon"><i class="fas fa-fire"></i></div>
+          <div>
+            <h2>Closed-Loop Blanket Gas System for a Hot Storage Tank</h2>
+            <p class="tag">Industrial research project, KAIST · Ongoing</p>
+          </div>
+        </div>
+        <dl class="facts">
+          <div><dt>Medium</dt><dd>Thermal oil, above 300 °C</dd></div>
+          <div><dt>Blanket gas</dt><dd>Nitrogen, closed loop</dd></div>
+          <div><dt>Duty</dt><dd>Many cycles per day</dd></div>
+          <div><dt>Stage</dt><dd>Concept design</dd></div>
+        </dl>
+
+        <h3>Overview</h3>
+        <p>A thermal energy storage tank filled with hot thermal oil charges and discharges many times a day. Every cycle moves the liquid level and pushes oil vapor into the space above it. The blanket gas system keeps that vapor space inert and at a steady low pressure without venting nitrogen to atmosphere.</p>
+
+        <h3>The system</h3>
+        <ul>
+          <li><strong>Condenser</strong> that knocks out oil vapor before the gas returns to storage.</li>
+          <li><strong>Elastic gas bag</strong> that takes up the change in vapor space volume as the tank level swings.</li>
+          <li><strong>Pressure control, pressure relief and vacuum relief valves</strong>, with instrumentation drawn to ISA 5.1.</li>
+        </ul>
+
+        <h3>Design work</h3>
+        <ul>
+          <li>Sizing the gas bag from the vapor space volume and the level swing over a full day of cycling.</li>
+          <li>Vapor pressure of the oil at operating temperature, used to set the control and relief set points.</li>
+          <li>Condenser duty at the peak cycling rate.</li>
+        </ul>
+        <p class="note">Operating figures and the client are left out because the project is under agreement.</p>
+      </article>
+
+      <article class="project" id="pvt">
+        <div class="top">
+          <div class="icon"><i class="fas fa-solar-panel"></i></div>
+          <div>
+            <h2>Solar PVT and Stratified Thermal Storage Co-Simulation</h2>
+            <p class="tag">Design of Energy Plants course, KAIST · 2026</p>
+          </div>
+        </div>
+        <dl class="facts">
+          <div><dt>Collector field</dt><dd>200 m² PVT</dd></div>
+          <div><dt>Storage tank</dt><dd>15 m³ stratified</dd></div>
+          <div><dt>Supply / return</dt><dd>~100 °C / ~55 °C</dd></div>
+          <div><dt>Sites</dt><dd>Daejeon and Cairo</dd></div>
+        </dl>
+
+        <h3>Overview</h3>
+        <p>A digital twin of a photovoltaic-thermal collector field feeding a stratified hot water tank. The same plant was run for two uses: district heating in Daejeon and absorption cooling in Cairo. Python ties together an Aspen HYSYS model of the plant and a MATLAB finite-difference model of the tank, so each tool does what it is good at.</p>
+
+        <h3>System</h3>
+        <ul>
+          <li>Tank of 15 m³ (4.24 m high, 2.12 m diameter) modeled as 10 stratified layers.</li>
+          <li>Water and ethylene glycol (70/30) as heat transfer fluid at about 6,500 kg/h.</li>
+          <li>Shell-and-tube heat exchanger between the collector loop and the tank.</li>
+        </ul>
+
+        <h3>What I did</h3>
+        <ul>
+          <li>Wrote a rule-based storage controller: charge gate, state-of-charge limits, demand-aware discharge, thermocline protection and flow modulation.</li>
+          <li>Fixed convergence and temperature-cross problems in the HYSYS model and night-time behavior in the tank model.</li>
+          <li>Built a desktop dashboard that pulls live weather data and shows plant KPIs.</li>
+          <li>Produced the engineering package: P&amp;ID to ISA 5.1, a HAZID worksheet, a LOPA study and an 18-page concept design report.</li>
+        </ul>
+
+        <h3>Tools</h3>
+        <ul class="tools"><li>Python</li><li>Aspen HYSYS</li><li>MATLAB</li><li>AutoCAD Plant 3D</li><li>CoolProp</li></ul>
+      </article>
+
+      <article class="project" id="csp">
+        <div class="top">
+          <div class="icon"><i class="fas fa-sun"></i></div>
+          <div>
+            <h2>CSP Solar Tower Comparison: Egypt, Saudi Arabia and UAE</h2>
+            <p class="tag">Independent study, KAIST · 2026</p>
+          </div>
+        </div>
+        <dl class="facts">
+          <div><dt>Sites</dt><dd>3 MENA locations</dd></div>
+          <div><dt>Weather data</dt><dd>NASA POWER</dd></div>
+          <div><dt>Storage model</dt><dd>Finite-difference tank</dd></div>
+        </dl>
+
+        <h3>Overview</h3>
+        <p>A Python model of a concentrated solar power tower with thermal storage, run on real weather data for sites in Egypt, Saudi Arabia and the UAE. The aim is to see how solar resource and ambient conditions change the annual yield and how hard the storage is worked.</p>
+
+        <h3>Method</h3>
+        <ul>
+          <li>Hourly solar and weather data pulled from the NASA POWER API for each site.</li>
+          <li>Storage modeled with a finite-difference tank model to track thermocline behavior through charge and discharge.</li>
+          <li>Compared annual energy yield, capacity factor, LCOE sensitivity and storage use.</li>
+        </ul>
+
+        <h3>Early findings</h3>
+        <ul>
+          <li>The Saudi and UAE sites see consistently higher direct normal irradiance than the Nile Delta site, which drives deeper storage cycles.</li>
+          <li>The tank model picks up differences in thermocline degradation between the climates.</li>
+        </ul>
+
+        <h3>Tools</h3>
+        <ul class="tools"><li>Python</li><li>pandas</li><li>matplotlib</li><li>MATLAB</li></ul>
+      </article>
+
+      <!-- ================= EARLIER ================= -->
+      <div class="divider"><h2>Earlier projects</h2></div>
+
+      <article class="project" id="turbine">
+        <div class="top">
+          <div class="icon"><i class="fas fa-cogs"></i></div>
+          <div>
+            <h2>Micro Gas Turbine (Jet Engine)</h2>
+            <p class="tag">Graduation project, Ain Shams University · 2022 · Funded by the Academy of Scientific Research and Technology</p>
+          </div>
+        </div>
+        <dl class="facts">
+          <div><dt>Design speed</dt><dd>90,000 rpm</dd></div>
+          <div><dt>Turbine</dt><dd>Axial, 10 rotor / 13 stator blades</dd></div>
+          <div><dt>Turbine efficiency</dt><dd>72.5% (estimated)</dd></div>
+          <div><dt>Status</dt><dd>Designed and built</dd></div>
+        </dl>
+
+        <figure class="media">
+          <video controls muted playsinline preload="none" poster="images/jet.jpg" src="videos/jet.mp4"></video>
+          <figcaption>Manufactured parts, the combustor model and CFD results.</figcaption>
+        </figure>
+
+        <h3>Overview</h3>
+        <p>Design, analysis and manufacture of a small turbojet. The goal was a compact engine that could be built at low cost, using a turbocharger compressor and a turbine designed for it.</p>
+
+        <h3>Design</h3>
+        <ul>
+          <li><strong>Compressor:</strong> a BorgWarner turbocharger impeller, chosen for cost and surface quality. Blade angles, diameter and performance maps were checked in CF-Turbo with velocity triangles and mean-line calculations.</li>
+          <li><strong>Turbine:</strong> a small axial stage designed from the mean line in CF-Turbo, with flow coefficient, loading and reaction worked out for the nozzle and rotor. Efficiency was checked against experimental data from Shapiro et al. (1957).</li>
+          <li><strong>Combustor:</strong> a mathematical model for the combustion chamber in EES, and thermal expansion checks on the liner materials.</li>
+        </ul>
+
+        <h3>Analysis</h3>
+        <ul>
+          <li><strong>Blade stress (Ansys Mechanical):</strong> at 90,000 rpm, 650 °C and 0.1 MPa on the blade face, peak von Mises stress was 349 MPa at the blade root, within limits. Tip deformation of 0.34 mm left a running clearance of about 0.43 mm.</li>
+          <li><strong>Modal analysis:</strong> natural frequencies and a Campbell diagram to confirm safe operation up to 120,000 rpm.</li>
+          <li><strong>CFD (Ansys Fluent, k-ω SST):</strong> pressure, velocity and temperature fields through the compressor and turbine. Compressor results matched the turbocharger maps, and turbine efficiency came out at about 72.5%.</li>
+          <li><strong>Cycle model (MATLAB):</strong> Brayton cycle for specific thrust, thermal efficiency and fuel use across ambient conditions and altitudes.</li>
+        </ul>
+
+        <h3>Tools</h3>
+        <ul class="tools"><li>Ansys Fluent</li><li>Ansys Mechanical</li><li>CF-Turbo</li><li>SolidWorks</li><li>MATLAB</li><li>EES</li></ul>
+        <div class="files"><a class="btn btn-outline" href="https://drive.google.com/drive/folders/1P-ZJqMC50FIAhVODEYGUPdZZ5wKkuSZ4?usp=sharing"><i class="fab fa-google-drive"></i> Files and simulations</a></div>
+      </article>
+
+      <article class="project" id="robot">
+        <div class="top">
+          <div class="icon"><i class="fas fa-robot"></i></div>
+          <div>
+            <h2>Humanoid Nursing Robot</h2>
+            <p class="tag">Freelance, for Ain Shams Specialist Hospital · 2020 – 2022</p>
+          </div>
+        </div>
+        <dl class="facts">
+          <div><dt>Use</dt><dd>Nursing support in hospital</dd></div>
+          <div><dt>My role</dt><dd>Mechanical design and build</dd></div>
+          <div><dt>Status</dt><dd>Built, being put into use at the hospital</dd></div>
+        </dl>
+
+        <figure class="media"><img src="images/robot.jpg" alt="The humanoid nursing robot" loading="lazy"></figure>
+
+        <h3>Overview</h3>
+        <p>A humanoid robot built from scratch to support nursing staff at Ain Shams Specialist Hospital, with face recognition, autonomous navigation and telehealth features handled by the electronics team.</p>
+
+        <h3>What I did</h3>
+        <ul>
+          <li>Mechanical design and 3D modeling of the frame in SolidWorks.</li>
+          <li>Motor sizing and speed reduction for the moving joints.</li>
+          <li>Kinematic modeling for the arm motion.</li>
+          <li>Manufacturing and assembly of most structural parts, mixing machined parts with 3D printed ones.</li>
+        </ul>
+
+        <h3>Tools</h3>
+        <ul class="tools"><li>SolidWorks</li><li>3D printing</li><li>Machining</li></ul>
+        <div class="files"><a class="btn btn-outline" href="https://drive.google.com/drive/folders/1ZdLzQUk5tEevAq3n_3rCq0NgJ7g-QGWt?usp=sharing"><i class="fab fa-google-drive"></i> Project files</a></div>
+      </article>
+
+      <article class="project" id="hev">
+        <div class="top">
+          <div class="icon"><i class="fas fa-car"></i></div>
+          <div>
+            <h2>Hybrid Electric Vehicle Model and Control Strategy</h2>
+            <p class="tag">Ain Shams University research center</p>
+          </div>
+        </div>
+        <dl class="facts">
+          <div><dt>Architecture</dt><dd>P2 parallel hybrid</dd></div>
+          <div><dt>Drive cycle</dt><dd>FTP-75</dd></div>
+          <div><dt>Platform</dt><dd>MATLAB / Simulink</dd></div>
+        </dl>
+
+        <figure class="media">
+          <video controls muted playsinline preload="none" poster="images/hev.jpg" src="videos/hev.mp4"></video>
+        </figure>
+
+        <h3>Overview</h3>
+        <p>A working Simulink model of a P2 parallel hybrid, built step by step: first a battery electric vehicle, then a conventional vehicle, then the hybrid that reuses parts and control logic from both. That kept the three models consistent and made the hybrid easier to debug.</p>
+
+        <h3>Model</h3>
+        <ul>
+          <li>FTP-75 urban drive cycle (2,474 s) as the speed demand.</li>
+          <li>Environment block for temperature, altitude, wind and road conditions.</li>
+          <li>Longitudinal driver model for throttle and braking.</li>
+          <li>Vehicle controller for speed and torque split, and the passenger car powertrain with engine and electric motor.</li>
+          <li>Plots of battery current, state of charge, fuel economy, speed and torque to judge the strategy.</li>
+        </ul>
+
+        <h3>Tools</h3>
+        <ul class="tools"><li>MATLAB</li><li>Simulink</li></ul>
+        <div class="files"><a class="btn btn-outline" href="https://drive.google.com/drive/folders/1qxwzy5NNhLi53ScuqUKGYv3nLJHEbU_e?usp=sharing"><i class="fab fa-google-drive"></i> Files and simulations</a></div>
+      </article>
+
+      <article class="project" id="desert">
+        <div class="top">
+          <div class="icon"><i class="fas fa-seedling"></i></div>
+          <div>
+            <h2>Desert Reclamation Systems, West Minya</h2>
+            <p class="tag">Mechanical design projects, Ain Shams University · 2021 – 2022</p>
+          </div>
+        </div>
+
+        <h3>Overview</h3>
+        <p>Three design projects for an agricultural reclamation site in the desert west of Minya, Egypt.</p>
+        <ul>
+          <li><strong>Pumping station:</strong> system design for irrigation water supply, including pump selection and piping.</li>
+          <li><strong>Permanent magnet generator:</strong> rotor and stator arrangement and magnet and core material selection for efficient power generation on site.</li>
+          <li><strong>Aluminum machine vice:</strong> a precision work-holding tool, with clamping force and stress checks, CNC machining and hand finishing.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</main>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>Let's work together</h2>
+    <p>The fastest way to reach me is email or LinkedIn.</p>
+    <div class="row">
+      <a href="mailto:ahmed.mahgoubu@gmail.com"><i class="far fa-envelope"></i> ahmed.mahgoubu@gmail.com</a>
+      <a href="https://www.linkedin.com/in/ahmed-mahgoub-528918188"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </div>
+</section>
+<footer>© <span id="yr">2026</span> Ahmed Mahgoub</footer>
+
+<script src="js/site.js"></script>
+<script>
+// highlight the project in view, and the mobile jump menu
+(function(){
+  var links=[].slice.call(document.querySelectorAll('.side a'));
+  var map={}; links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a;});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){links.forEach(function(a){a.classList.remove('on');}); var a=map[e.target.id]; if(a)a.classList.add('on');}
+    });},{rootMargin:'-40% 0px -55% 0px'});
+    document.querySelectorAll('.project').forEach(function(p){io.observe(p);});
+  }
+  var j=document.getElementById('jump');
+  j.addEventListener('change',function(){if(j.value){location.hash=j.value;}});
+})();
+</script>
+</body>
+</html>

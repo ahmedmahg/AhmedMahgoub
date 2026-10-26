@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV &amp; Certifications | Ahmed Mahgoub</title>
+<meta name="description" content="CV, certifications, recommendation letters and coursework of Ahmed Mahgoub.">
+<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="css/site.css">
+<style>
+.page-head{padding:104px 0 8px}
+.page-head h1{margin:0;font-size:34px;color:#1c2733}
+.page-head p{margin:6px 0 0;color:var(--muted);max-width:66ch}
+.panel{background:var(--card);border-radius:var(--radius);box-shadow:0 2px 8px rgba(0,0,0,.08);padding:28px 32px;margin:28px 0}
+.panel .head{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.panel h2{margin:0;font-size:24px;color:#1c2733;display:flex;align-items:center;gap:12px}
+.panel h2 i{color:var(--navy);font-size:20px}
+.panel .head p{margin:4px 0 0;color:var(--muted)}
+.viewer{width:100%;height:880px;border:1px solid var(--line);border-radius:8px;background:#f1f3f5;display:block}
+.viewer.short{height:620px}
+.letters{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:22px}
+.letter h3{margin:0;font-size:19px;color:#1c2733}
+.letter .who{margin:2px 0 6px;color:#333}
+.letter p{margin:0 0 12px;color:var(--muted)}
+.letter .viewer{height:520px}
+details.course summary{cursor:pointer;font-weight:600;color:var(--navy);list-style:none;font-size:16px}
+details.course summary::-webkit-details-marker{display:none}
+details.course summary::before{content:"\f107";font-family:"Font Awesome 5 Free";font-weight:900;margin-right:8px;display:inline-block;transition:transform .2s;transform:rotate(-90deg)}
+details.course[open] summary::before{transform:none}
+table{width:100%;border-collapse:collapse;margin-top:16px;font-size:16px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:14px;color:var(--muted);font-weight:600;background:#fbfcfd}
+td.term{color:var(--navy);font-weight:600;white-space:nowrap}
+td.code{color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.pages{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.pages img{display:block;width:100%;border:1px solid var(--line);border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.06);transition:box-shadow .2s}
+.pages:hover img{box-shadow:0 6px 16px rgba(0,0,0,.12)}
+@media (max-width:860px){
+  .page-head{padding-top:92px}
+  .page-head h1{font-size:28px}
+  .panel{padding:22px 18px}
+  .panel h2{font-size:21px}
+  .viewer{height:520px}
+  .letter .viewer{height:440px}
+  .letters{grid-template-columns:1fr}
+  .pages{grid-template-columns:1fr}
+  table{font-size:15px}
+  th,td{padding:8px 6px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <a href="index.html" class="logo"><img src="images/logo.svg" alt="">Ahmed Mahgoub</a>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav"><i class="fas fa-bars"></i></button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="projects.html">Projects</a>
+      <a href="cv.html" class="active">CV &amp; Certifications</a>
+      <a href="guide/index.html">Study Abroad Guide</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="page-head">
+    <h1>CV &amp; Certifications</h1>
+    <p>My CV, training certificates, recommendation letters from Ain Shams University, and the courses behind my B.Sc.</p>
+  </div>
+
+  <section class="panel" id="cv" aria-labelledby="cv-h">
+    <div class="head">
+      <div>
+        <h2 id="cv-h"><i class="fas fa-file-alt"></i>Curriculum Vitae</h2>
+        <p>Two pages. Click a page to open the PDF.</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="cv/Ahmed-Mahgoub-CV.pdf" download><i class="fas fa-file-download"></i> Download CV</a>
+        <a class="btn btn-outline" href="cv/Ahmed-Mahgoub-CV.pdf" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Open in new tab</a>
+      </div>
+    </div>
+    <a class="pages" href="cv/Ahmed-Mahgoub-CV.pdf" target="_blank" rel="noopener" aria-label="Open the CV as PDF">
+      <img src="cv/page-1.jpg" alt="CV, page 1" loading="lazy">
+      <img src="cv/page-2.jpg" alt="CV, page 2" loading="lazy">
+    </a>
+  </section>
+
+  <section class="panel" id="certifications" aria-labelledby="cert-h">
+    <div class="head">
+      <div>
+        <h2 id="cert-h"><i class="fas fa-certificate"></i>Certifications</h2>
+        <p>Training and internship certificates in one file.</p>
+      </div>
+      <a class="btn btn-outline" href="https://drive.google.com/file/d/1Z3BzykJZaYSdJAMe8O4UVnaLQMEL89hu/view" target="_blank" rel="noopener"><i class="fab fa-google-drive"></i> Open in Google Drive</a>
+    </div>
+    <iframe class="viewer short" src="https://drive.google.com/file/d/1Z3BzykJZaYSdJAMe8O4UVnaLQMEL89hu/preview" title="Certifications" loading="lazy"></iframe>
+  </section>
+
+  <section class="panel" id="recommendations" aria-labelledby="rec-h">
+    <div class="head">
+      <div>
+        <h2 id="rec-h"><i class="fas fa-envelope-open-text"></i>Recommendation Letters</h2>
+        <p>From my professors at Ain Shams University.</p>
+      </div>
+    </div>
+    <div class="letters">
+      <article class="letter">
+        <h3>Prof. Ashraf Ghorab</h3>
+        <p class="who">Head of the Mechanical Power Engineering Department, Ain Shams University</p>
+        <p>On my undergraduate studies and my work in the Turbomachinery course.</p>
+        <iframe class="viewer" src="https://drive.google.com/file/d/10J5Tj6K3YzoEkpU-x0Xo3YywPegPveEd/preview" title="Recommendation letter from Prof. Ashraf Ghorab" loading="lazy"></iframe>
+      </article>
+      <article class="letter">
+        <h3>Dr. Ahmed Eldein Hussin</h3>
+        <p class="who">Associate Professor, Mechanical Power Engineering, Ain Shams University</p>
+        <p>On my undergraduate studies and my graduation project.</p>
+        <iframe class="viewer" src="https://drive.google.com/file/d/1R4QDnTkkshpaIyKEpq90B0iRjdMZ4rmX/preview" title="Recommendation letter from Dr. Ahmed Eldein Hussin" loading="lazy"></iframe>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel" id="coursework" aria-labelledby="course-h">
+    <div class="head">
+      <div>
+        <h2 id="course-h"><i class="fas fa-book"></i>Coursework</h2>
+        <p>B.Sc. in Mechanical Power Engineering, Ain Shams University, 2017 – 2022.</p>
+      </div>
+    </div>
+    <details class="course">
+      <summary>Show all courses</summary>
+      <table>
+        <thead><tr><th>Year</th><th>Code</th><th>Course</th></tr></thead>
+        <tbody>
+          <tr><td class="term" rowspan="6">2022</td><td class="code">MEP499</td><td>Graduation Project: Design and Manufacture of a Micro Gas Turbine</td></tr>
+          <tr><td class="code">MEP471</td><td>Refrigeration and Air Conditioning</td></tr>
+          <tr><td class="code">MEP431</td><td>Turbomachinery (2)</td></tr>
+          <tr><td class="code">MEP482</td><td>Modeling and Simulation of Thermal Power Systems</td></tr>
+          <tr><td class="code">MEP481</td><td>Automatic Control (2)</td></tr>
+          <tr><td class="code">HUMx41</td><td>Legislation and Contracts</td></tr>
+          <tr><td class="term" rowspan="9">2021</td><td class="code">MEP331</td><td>Turbomachinery (1)</td></tr>
+          <tr><td class="code">MEP351</td><td>Thermal Power Plants</td></tr>
+          <tr><td class="code">MEP352</td><td>Renewable Energy</td></tr>
+          <tr><td class="code">MEP361</td><td>Combustion</td></tr>
+          <tr><td class="code">MEP362</td><td>Internal Combustion Engines (1)</td></tr>
+          <tr><td class="code">MEP381</td><td>Automatic Control (1)</td></tr>
+          <tr><td class="code">MDP354</td><td>Mechanics of Machines (2)</td></tr>
+          <tr><td class="code">MDP355</td><td>Introduction to Mechatronics</td></tr>
+          <tr><td class="code">HUMx21</td><td>Management and Marketing</td></tr>
+          <tr><td class="term" rowspan="6">2020</td><td class="code">MEP212</td><td>Thermodynamics (2)</td></tr>
+          <tr><td class="code">MEP221</td><td>Heat and Mass Transfer</td></tr>
+          <tr><td class="code">MEP231</td><td>Fluid Dynamics</td></tr>
+          <tr><td class="code">MDP211</td><td>Manufacturing Technology (2)</td></tr>
+          <tr><td class="code">MDP251</td><td>Mechanics of Machines</td></tr>
+          <tr><td class="code">HUMx31</td><td>Engineering Economy</td></tr>
+          <tr><td class="term" rowspan="6">2019</td><td class="code">CES112</td><td>Theory of Structures</td></tr>
+          <tr><td class="code">EPM112</td><td>Electrical and Electronic Engineering</td></tr>
+          <tr><td class="code">MDP111</td><td>Manufacturing Technology</td></tr>
+          <tr><td class="code">MDP131</td><td>Materials Engineering and Testing</td></tr>
+          <tr><td class="code">MDP161</td><td>Machine Drawing</td></tr>
+          <tr><td class="code">HUMx12</td><td>Technical Report Writing</td></tr>
+          <tr><td class="term" rowspan="7">2018</td><td class="code">PHM011</td><td>Mathematics (1)</td></tr>
+          <tr><td class="code">PHM021</td><td>Physics (1)</td></tr>
+          <tr><td class="code">MDP021</td><td>Engineering Drawing and Projection</td></tr>
+          <tr><td class="code">MDP022</td><td>Production and Engineering History</td></tr>
+          <tr><td class="code">CSE011</td><td>Computer Technology</td></tr>
+          <tr><td class="code">HUMx11</td><td>Technical English</td></tr>
+          <tr><td class="code">HUM099</td><td>Human Rights</td></tr>
+        </tbody>
+      </table>
+    </details>
+  </section>
+</main>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <h2>Let's work together</h2>
+    <p>The fastest way to reach me is email or LinkedIn.</p>
+    <div class="row">
+      <a href="mailto:ahmed.mahgoubu@gmail.com"><i class="far fa-envelope"></i> ahmed.mahgoubu@gmail.com</a>
+      <a href="https://www.linkedin.com/in/ahmed-mahgoub-528918188"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </div>
+</section>
+<footer>© <span id="yr">2026</span> Ahmed Mahgoub</footer>
+<script src="js/site.js"></script>
+</body>
+</html>
